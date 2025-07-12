@@ -4,10 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="1_h2akf"]
 
 [sub_resource type="SystemFont" id="SystemFont_8mldl"]
+font_names = PackedStringArray("Montserrat")
 
 [sub_resource type="LabelSettings" id="LabelSettings_8mldl"]
 font = SubResource("SystemFont_8mldl")
-font_color = Color(0, 0, 0, 1)
+font_size = 36
 
 [node name="Dialog Player" type="CanvasLayer"]
 script = ExtResource("1_8mldl")

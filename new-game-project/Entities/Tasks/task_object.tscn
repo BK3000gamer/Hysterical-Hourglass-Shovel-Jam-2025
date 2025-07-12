@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0lbuyi5bs18u"]
+
+[ext_resource type="Script" uid="uid://bln8n7cj31uja" path="res://Entities/Tasks/task_object.gd" id="1_0gnj1"]
+[ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_myy5h"]
+
+[node name="Task Object" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_0gnj1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_myy5h")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -65.0
+offset_top = -65.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

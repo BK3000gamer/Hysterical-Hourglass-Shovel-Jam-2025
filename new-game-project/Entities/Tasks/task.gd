@@ -1,7 +1,7 @@
 extends Node2D
 class_name Tasks
 
-@export var dialogKey = ""
+@export var dialogKey: String = ""
 
-func _on_button_button_down() -> void:
+func _ready() -> void:
 	SignalBus.emit_signal("display_dialog", dialogKey)
