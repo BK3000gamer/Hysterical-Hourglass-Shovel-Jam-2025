@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://db6kod2ebfgs"]
+
+[ext_resource type="Script" uid="uid://dutdhapt4pg4i" path="res://UI/dialog_player.gd" id="1_8mldl"]
+[ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="1_h2akf"]
+
+[sub_resource type="SystemFont" id="SystemFont_8mldl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8mldl"]
+font = SubResource("SystemFont_8mldl")
+font_color = Color(0, 0, 0, 1)
+
+[node name="Dialog Player" type="CanvasLayer"]
+script = ExtResource("1_8mldl")
+
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1200, 300)
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.95
+anchor_right = 0.5
+anchor_bottom = 0.95
+offset_left = -600.0
+offset_top = -300.0
+offset_right = 600.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_h2akf")
+
+[node name="Text Label" type="Label" parent="."]
+custom_minimum_size = Vector2(1150, 250)
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.925
+anchor_right = 0.5
+anchor_bottom = 0.925
+offset_left = -575.0
+offset_top = -250.0
+offset_right = 575.0
+grow_horizontal = 2
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_8mldl")
+autowrap_mode = 2
