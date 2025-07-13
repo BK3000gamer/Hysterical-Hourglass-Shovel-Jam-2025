@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4b060mr5pq2d"]
+
+[ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_0gnj1"]
+
+[node name="Task" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_0gnj1")
+dialogKey = "test"

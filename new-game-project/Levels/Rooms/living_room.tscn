@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d2pfqdgmod8yk"]
 
-[ext_resource type="Script" uid="uid://dfrts4mmbagjl" path="res://Levels/room.gd" id="1_dylc0"]
+[ext_resource type="Script" uid="uid://dfrts4mmbagjl" path="res://Levels/Rooms/room.gd" id="1_dylc0"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="2_u4uyh"]
 [ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="3_8df2k"]
 

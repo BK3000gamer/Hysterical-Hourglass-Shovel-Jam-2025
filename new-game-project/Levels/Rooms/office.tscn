@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbuwpm0vjltfd"]
 
-[ext_resource type="Script" uid="uid://dfrts4mmbagjl" path="res://Levels/room.gd" id="1_lin51"]
+[ext_resource type="Script" uid="uid://dfrts4mmbagjl" path="res://Levels/Rooms/room.gd" id="1_lin51"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="2_f7np1"]
 [ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="3_o7mkb"]
 
@@ -11,4 +11,5 @@ metadata/_custom_type_script = "uid://dfrts4mmbagjl"
 [node name="Timer UI" parent="." instance=ExtResource("2_f7np1")]
 
 [node name="2nd Floor Door" parent="." instance=ExtResource("3_o7mkb")]
+position = Vector2(1048, 558)
 room = "uid://6hbswx1wbmqk"

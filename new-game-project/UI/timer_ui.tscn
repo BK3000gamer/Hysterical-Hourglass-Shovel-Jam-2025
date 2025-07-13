@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://b45yr4h71dug0" path="res://UI/timer_ui.gd" id="1_3ixk1"]
 
-[sub_resource type="SystemFont" id="SystemFont_fg388"]
+[sub_resource type="SystemFont" id="SystemFont_3ixk1"]
 font_names = PackedStringArray("Montserrat")
 font_weight = 600
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ixk1"]
-font = SubResource("SystemFont_fg388")
+font = SubResource("SystemFont_3ixk1")
 font_size = 64
 
 [node name="Timer UI" type="CanvasLayer"]
