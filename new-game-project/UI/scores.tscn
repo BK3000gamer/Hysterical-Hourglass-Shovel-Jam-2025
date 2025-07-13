@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8lw7cpbrv5r3"]
+
+[ext_resource type="Script" uid="uid://d4nekkdsy4v0d" path="res://UI/scores.gd" id="1_oe5sd"]
+
+[sub_resource type="SystemFont" id="SystemFont_fg388"]
+font_names = PackedStringArray("Montserrat")
+font_weight = 600
+
+[sub_resource type="LabelSettings" id="LabelSettings_a5kgc"]
+font = SubResource("SystemFont_fg388")
+font_size = 64
+
+[node name="Scores" type="CanvasLayer"]
+script = ExtResource("1_oe5sd")
+time = 60
+room = "uid://dghm0atvqrg70"
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(200, 100)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_a5kgc")
+horizontal_alignment = 1
