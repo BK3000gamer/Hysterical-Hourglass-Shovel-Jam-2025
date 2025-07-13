@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bvospwsyr7diq"]
+[gd_scene load_steps=20 format=3 uid="uid://bvospwsyr7diq"]
 
 [ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_04gu6"]
 [ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_a5kgc"]
@@ -24,8 +24,17 @@ gradient = SubResource("Gradient_ufg4w")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufg4w"]
-size = Vector2(120, 50)
+[sub_resource type="Gradient" id="Gradient_sxnhr"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_aephm"]
+gradient = SubResource("Gradient_sxnhr")
+width = 125
+height = 125
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ufg4w"]
+radius = 29.0
+height = 114.0
 
 [sub_resource type="SystemFont" id="SystemFont_fg388"]
 font_names = PackedStringArray("Montserrat")
@@ -124,12 +133,13 @@ scale = Vector2(2, 1)
 texture = SubResource("GradientTexture2D_sxnhr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Clothes"]
-texture = ExtResource("2_a5kgc")
+texture = SubResource("GradientTexture2D_aephm")
 
 [node name="Area2D" type="Area2D" parent="Clothes"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clothes/Area2D"]
-shape = SubResource("RectangleShape2D_ufg4w")
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ufg4w")
 debug_color = Color(1, 0, 0.0931407, 0.42)
 
 [node name="Cursor" type="Node2D" parent="."]

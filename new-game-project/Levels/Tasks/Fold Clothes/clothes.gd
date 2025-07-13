@@ -12,6 +12,17 @@ func _ready() -> void:
 	reset()
 
 func _physics_process(delta: float) -> void:
+	if color == 0:
+		sprite.modulate = Color(0, 0, 0)
+	elif color == 1:
+		sprite.modulate = Color(1, 1, 1)
+	elif  color == 2:
+		sprite.modulate = Color(1, 0, 0)
+	elif color == 3:
+		sprite.modulate = Color(0, 1, 0)
+	elif  color == 4:
+		sprite.modulate = Color(0, 0, 1)
+	
 	sprite.position.y = -height
 	var target = position - cursor.mouseDir * 250
 	if cursor.pulled and !cursor.dragging:
@@ -31,9 +42,6 @@ func _physics_process(delta: float) -> void:
 	if fired and height == 0:
 		reset()
 	move_and_slide()
-	
-	if position.y < 0 or position.x < 0 or position.x > 1920:
-		reset()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print ("collided")
