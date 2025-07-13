@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://6hbswx1wbmqk"]
+
+[ext_resource type="Script" uid="uid://dfrts4mmbagjl" path="res://Levels/room.gd" id="1_0fxqt"]
+[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="2_faqrc"]
+[ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="3_sw1ej"]
+
+[node name="2nd Floor" type="Node2D"]
+script = ExtResource("1_0fxqt")
+metadata/_custom_type_script = "uid://dfrts4mmbagjl"
+
+[node name="Timer UI" parent="." instance=ExtResource("2_faqrc")]
+
+[node name="1st Floor Door" parent="." instance=ExtResource("3_sw1ej")]
+position = Vector2(960, 599)
+room = "uid://dafpxex175r24"
+
+[node name="Bed Room Door" parent="." instance=ExtResource("3_sw1ej")]
+position = Vector2(615, 634)
+room = "uid://bstqgq8pxmtjo"
+
+[node name="Office Door" parent="." instance=ExtResource("3_sw1ej")]
+position = Vector2(1506, 637)
+room = "uid://cbuwpm0vjltfd"
+
+[node name="Attic Door" parent="." instance=ExtResource("3_sw1ej")]
+position = Vector2(176, 712)
+room = "uid://du2qc05q0fqbs"

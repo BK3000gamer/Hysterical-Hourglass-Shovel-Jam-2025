@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d4b060mr5pq2d"]
 
-[ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Entities/Tasks/task.gd" id="1_0gnj1"]
+[ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/task.gd" id="1_0gnj1"]
 [ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="2_0gnj1"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="3_myy5h"]
 

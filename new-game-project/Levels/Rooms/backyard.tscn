@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0noph186iboi"]
+
+[ext_resource type="Script" uid="uid://dfrts4mmbagjl" path="res://Levels/room.gd" id="1_isixs"]
+[ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="2_voe63"]
+[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="3_opbri"]
+
+[node name="Backyard" type="Node2D"]
+script = ExtResource("1_isixs")
+metadata/_custom_type_script = "uid://dfrts4mmbagjl"
+
+[node name="Timer UI" parent="." instance=ExtResource("3_opbri")]
+
+[node name="Living Room Door" parent="." instance=ExtResource("2_voe63")]
+position = Vector2(1484, 751)
+room = "uid://d2pfqdgmod8yk"
+
+[node name="Kitchen Door" parent="." instance=ExtResource("2_voe63")]
+position = Vector2(384, 765)
+room = "uid://dghm0atvqrg70"
+
+[node name="Basement Door" parent="." instance=ExtResource("2_voe63")]
+position = Vector2(1484, 751)
+room = "uid://dgx1imjkfolew"

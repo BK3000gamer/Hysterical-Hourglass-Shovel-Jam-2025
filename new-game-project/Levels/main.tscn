@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://blcqrc3busryj"]
 
-[ext_resource type="PackedScene" uid="uid://d0lbuyi5bs18u" path="res://Entities/Tasks/task_object.tscn" id="1_gnif3"]
+[ext_resource type="PackedScene" uid="uid://d0lbuyi5bs18u" path="res://Entities/task_object.tscn" id="1_gnif3"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="2_gnif3"]
 
 [node name="Main" type="Node2D"]

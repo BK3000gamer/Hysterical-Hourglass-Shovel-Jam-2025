@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d0lbuyi5bs18u"]
 
-[ext_resource type="Script" uid="uid://bln8n7cj31uja" path="res://Entities/Tasks/task_object.gd" id="1_0gnj1"]
+[ext_resource type="Script" uid="uid://bln8n7cj31uja" path="res://Entities/task_object.gd" id="1_0gnj1"]
 [ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_myy5h"]
 
 [node name="Task Object" type="Node2D"]
