@@ -52,6 +52,12 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_a5kgc")
 
+[node name="Scores" parent="." instance=ExtResource("11_sxnhr")]
+scoreMultiplier = 2
+room = "uid://bstqgq8pxmtjo"
+
+[node name="Timer UI" parent="." instance=ExtResource("12_sxnhr")]
+
 [node name="Black Box" type="Area2D" parent="."]
 position = Vector2(450, 685)
 collision_mask = 0
@@ -148,12 +154,6 @@ offset_left = -32.0
 offset_top = -32.0
 offset_right = 32.0
 offset_bottom = 32.0
-
-[node name="Scores" parent="." instance=ExtResource("11_sxnhr")]
-scoreMultiplier = 2
-room = "uid://bstqgq8pxmtjo"
-
-[node name="Timer UI" parent="." instance=ExtResource("12_sxnhr")]
 
 [connection signal="area_entered" from="Clothes/Area2D" to="Clothes" method="_on_area_2d_area_entered"]
 [connection signal="button_down" from="Cursor/Button" to="Cursor" method="_on_button_button_down"]

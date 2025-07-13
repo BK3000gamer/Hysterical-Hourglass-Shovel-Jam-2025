@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=3 uid="uid://vhvi6qb82qrv"]
+
+[ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_6hlkn"]
+[ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_yxabr"]
+[ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_xynur"]
+[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="4_i2qb5"]
+[ext_resource type="Script" uid="uid://c2qekpaocs2cj" path="res://Levels/Tasks/Straighten Picture Frames/picture.gd" id="5_yxabr"]
+
+[node name="Straighten Picture Frames" type="Node2D"]
+script = ExtResource("1_6hlkn")
+metadata/_custom_type_script = "uid://gtgw2e6juj6o"
+
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yxabr")
+
+[node name="Scores" parent="." instance=ExtResource("3_xynur")]
+time = 30
+scoreMultiplier = 10
+room = "uid://d2pfqdgmod8yk"
+
+[node name="Timer UI" parent="." instance=ExtResource("4_i2qb5")]
+
+[node name="Picture" type="Node2D" parent="."]
+position = Vector2(952, 570)
+script = ExtResource("5_yxabr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Picture"]
+scale = Vector2(2, 2.5)
+texture = ExtResource("2_yxabr")
+
+[node name="Picture2" type="Node2D" parent="."]
+position = Vector2(464, 250)
+script = ExtResource("5_yxabr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Picture2"]
+scale = Vector2(2, 2.5)
+texture = ExtResource("2_yxabr")
+
+[node name="Picture3" type="Node2D" parent="."]
+position = Vector2(1608, 250)
+script = ExtResource("5_yxabr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Picture3"]
+scale = Vector2(2, 2.5)
+texture = ExtResource("2_yxabr")
+
+[node name="Picture4" type="Node2D" parent="."]
+position = Vector2(1480, 694)
+script = ExtResource("5_yxabr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Picture4"]
+scale = Vector2(2, 2.5)
+texture = ExtResource("2_yxabr")
+
+[node name="Picture5" type="Node2D" parent="."]
+position = Vector2(525, 730)
+script = ExtResource("5_yxabr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Picture5"]
+scale = Vector2(2, 2.5)
+texture = ExtResource("2_yxabr")

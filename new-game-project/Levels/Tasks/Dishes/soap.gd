@@ -46,7 +46,7 @@ func paint_to_mask(local_pos: Vector2):
 	
 	drawTexture.set_image(img)
 
-func is_area_filled(threshold_percent := 0.9) -> bool:
+func is_area_filled(threshold_percent := 0.95) -> bool:
 	var img = drawMask
 	var white_pixel_count = 0
 	var total_pixels = 0
