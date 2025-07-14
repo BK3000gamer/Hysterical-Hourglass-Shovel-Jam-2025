@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://d1h62h6mt525j"]
+
+[ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_crr54"]
+[ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_3i0jy"]
+[ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_x6bms"]
+[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="4_f637s"]
+[ext_resource type="Script" uid="uid://cbdpmfdjq7iee" path="res://Levels/Tasks/Walk Lizard/lizard.gd" id="5_3i0jy"]
+[ext_resource type="Script" uid="uid://rivodsdfqdoa" path="res://Levels/Tasks/Walk Lizard/border.gd" id="6_x6bms"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3i0jy"]
+size = Vector2(376, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6bms"]
+size = Vector2(480, 20)
+
+[node name="Walk Lizard" type="Node2D"]
+script = ExtResource("1_crr54")
+metadata/_custom_type_script = "uid://gtgw2e6juj6o"
+
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3i0jy")
+
+[node name="Scores" parent="." instance=ExtResource("3_x6bms")]
+scoreMultiplier = 10
+autoFinish = true
+
+[node name="Timer UI" parent="." instance=ExtResource("4_f637s")]
+
+[node name="Lizard" type="CharacterBody2D" parent="."]
+position = Vector2(1500, 540)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_3i0jy")
+speed = 150.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Lizard"]
+scale = Vector2(3, 1)
+texture = ExtResource("2_3i0jy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lizard"]
+shape = SubResource("RectangleShape2D_3i0jy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(960, 0)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -64)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_x6bms")
+
+[node name="Border" type="Area2D" parent="."]
+position = Vector2(960, 0)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("6_x6bms")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border"]
+position = Vector2(0, -40)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_x6bms")
+
+[connection signal="body_entered" from="Border" to="Border" method="_on_body_entered"]

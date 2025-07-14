@@ -37,7 +37,7 @@ grow_vertical = 2
 texture = ExtResource("2_bc6w5")
 
 [node name="Scores" parent="." instance=ExtResource("3_d1662")]
-scoreMultiplier = 5
+scoreMultiplier = 10
 
 [node name="Timer UI" parent="." instance=ExtResource("4_443or")]
 

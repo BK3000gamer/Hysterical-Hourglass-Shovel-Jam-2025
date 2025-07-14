@@ -1,22 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cyjwfjr67als8"]
+[gd_scene load_steps=7 format=3 uid="uid://cyjwfjr67als8"]
 
 [ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="1_ciqco"]
 [ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_s8qob"]
 [ext_resource type="Script" uid="uid://dskmd6mx6x58w" path="res://Levels/Tasks/Dishes/soap.gd" id="2_1g64e"]
 [ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_6g2lp"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="4_pkbuc"]
-
-[sub_resource type="Gradient" id="Gradient_1g64e"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.700508)
-colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_6g2lp"]
-gradient = SubResource("Gradient_1g64e")
-width = 800
-height = 800
-fill = 1
-fill_from = Vector2(0.5, 0.5)
+[ext_resource type="Texture2D" uid="uid://yakbmue38bo" path="res://Levels/Tasks/Dishes/Dirty_Plate.png" id="5_pkbuc"]
 
 [node name="Dishes" type="Node2D"]
 script = ExtResource("1_s8qob")
@@ -42,7 +31,7 @@ scoreMultiplier = 5
 position = Vector2(960, 625)
 
 [node name="Sprite2D" type="Sprite2D" parent="Dish"]
-texture = SubResource("GradientTexture2D_6g2lp")
+texture = ExtResource("5_pkbuc")
 
 [node name="Soap" type="Node2D" parent="Dish"]
 script = ExtResource("2_1g64e")
