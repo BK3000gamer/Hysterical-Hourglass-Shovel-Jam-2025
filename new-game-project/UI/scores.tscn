@@ -5,6 +5,7 @@
 [sub_resource type="SystemFont" id="SystemFont_fg388"]
 font_names = PackedStringArray("Montserrat")
 font_weight = 600
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_a5kgc"]
 font = SubResource("SystemFont_fg388")

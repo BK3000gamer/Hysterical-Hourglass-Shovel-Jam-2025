@@ -5,6 +5,10 @@ var score: int = 0
 
 @export var time: int = 0
 @export var scoreMultiplier: int = 0
+@export var autoFinish: bool = false
+@export var finishScore: int = 0
+@export var timedScore: bool = false
+@export var timedScoreMultiplier: int = 0
 @export_file("*.tscn") var room: String
 
 func _ready() -> void:
@@ -20,5 +24,11 @@ func timerTimeout():
 func _process(delta: float) -> void:
 	label.text = '%02d\n%02d' % [time, score]
 	if time == 0:
+		GlobalTimer.total_time += score * scoreMultiplier
+		get_tree().change_scene_to_file(room)
+	
+	if autoFinish and score == finishScore:
+		if timedScore:
+			GlobalTimer.total_time += time * timedScoreMultiplier
 		GlobalTimer.total_time += score * scoreMultiplier
 		get_tree().change_scene_to_file(room)

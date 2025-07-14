@@ -6,7 +6,8 @@ var clickPos: Array= []
 var drawMask: Image
 var drawTexture: ImageTexture
 const areaCentre = Vector2(960, 625)
-const areaRadius = 400
+@export var areaRadius = 400
+@export var soapRadius = 50
 const resolution = 256
 var localPos
 
@@ -63,4 +64,4 @@ func is_area_filled(threshold_percent := 0.95) -> bool:
 
 func _draw() -> void:
 	for point in clickPos:
-		draw_circle(point, 50, Color.WHITE, true)
+		draw_circle(point, soapRadius, Color.WHITE, true)

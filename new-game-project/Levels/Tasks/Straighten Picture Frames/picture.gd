@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var scoreCounter = $"../Scores"
 
+@export var snapAngle: float = 0.05
+
 var mouse = get_global_mouse_position()
 var mouseDown: bool = false
 var angle: float
@@ -32,19 +34,21 @@ func _input(event: InputEvent) -> void:
 			var mouseAngle = global_position.angle_to_point(mouse)
 			dragOffset = rotation - mouseAngle
 
+func is_near_zero(value: float, epsilon: float = snapAngle) -> bool:
+	return abs(value) < epsilon
+
 func _physics_process(delta: float) -> void:
-	print (rotation)
 	mouse = get_global_mouse_position()
 	if dragging:
 		var mouseAngle = global_position.angle_to_point(mouse)
 		rotation = mouseAngle + dragOffset
 	
-	if rotation > -0.05 and rotation < 0.05:
+	if is_near_zero(rotation):
 		disabled = true
 		rotation = 0
 	else:
 		disabled = false
 	
-	if !mouseDown and disabled and rotation == 0 and !scored:
+	if !mouseDown and disabled and !scored:
 		scored = true
 		scoreCounter.score += 1

@@ -23,7 +23,11 @@ texture = ExtResource("2_yxabr")
 
 [node name="Scores" parent="." instance=ExtResource("3_xynur")]
 time = 30
-scoreMultiplier = 10
+scoreMultiplier = 6
+autoFinish = true
+finishScore = 5
+timedScore = true
+timedScoreMultiplier = 1
 room = "uid://d2pfqdgmod8yk"
 
 [node name="Timer UI" parent="." instance=ExtResource("4_i2qb5")]
