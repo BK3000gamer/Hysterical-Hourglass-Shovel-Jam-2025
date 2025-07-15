@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://fa47bptauwcs"]
+
+[ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_mw8cw"]
+[ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_a6q0f"]
+[ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_35p2s"]
+[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="4_ly11a"]
+[ext_resource type="Script" uid="uid://dabk64pxi5c0i" path="res://Levels/Tasks/Holy Water/cursor.gd" id="5_35p2s"]
+[ext_resource type="Script" uid="uid://davyiswudldkc" path="res://Levels/Tasks/Holy Water/range.gd" id="5_a6q0f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mw8cw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_35p2s"]
+
+[node name="Holy Water" type="Node2D"]
+script = ExtResource("1_mw8cw")
+metadata/_custom_type_script = "uid://gtgw2e6juj6o"
+
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_a6q0f")
+
+[node name="Scores" parent="." instance=ExtResource("3_35p2s")]
+scoreMultiplier = 5
+
+[node name="Timer UI" parent="." instance=ExtResource("4_ly11a")]
+
+[node name="Range" type="Area2D" parent="."]
+position = Vector2(1300, 0)
+scale = Vector2(0.8, 1)
+script = ExtResource("5_a6q0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Range"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_a6q0f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_mw8cw")
+
+[node name="Cursor" type="CharacterBody2D" parent="."]
+position = Vector2(1300, 0)
+scale = Vector2(1, 0.25)
+script = ExtResource("5_35p2s")
+speed = 200.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Cursor"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_a6q0f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cursor"]
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_35p2s")
+
+[connection signal="body_entered" from="Range" to="Range" method="_on_body_entered"]
+[connection signal="body_exited" from="Range" to="Range" method="_on_body_exited"]

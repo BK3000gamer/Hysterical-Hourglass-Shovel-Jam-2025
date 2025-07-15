@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://8ifoi48nlq24"]
+
+[ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_12vgj"]
+[ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_pta1y"]
+[ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_svbbo"]
+[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="4_v4t0n"]
+[ext_resource type="Script" uid="uid://bjw6mj5xjxbo5" path="res://Levels/Tasks/Indoor Obelisk/array.gd" id="5_pta1y"]
+[ext_resource type="Texture2D" uid="uid://dkof72t0yri1y" path="res://Assets/Textures/Green/texture_09.png" id="6_svbbo"]
+[ext_resource type="Script" uid="uid://me3qcdqexfb1" path="res://Levels/Tasks/Indoor Obelisk/obelisk_symbol.gd" id="7_v4t0n"]
+[ext_resource type="Script" uid="uid://drlufesi7fudr" path="res://Levels/Tasks/Indoor Obelisk/player_symbol.gd" id="8_ntrfe"]
+
+[node name="Indoor Obelisk" type="Node2D"]
+script = ExtResource("1_12vgj")
+metadata/_custom_type_script = "uid://gtgw2e6juj6o"
+
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_pta1y")
+
+[node name="Scores" parent="." instance=ExtResource("3_svbbo")]
+scoreMultiplier = 5
+
+[node name="Timer UI" parent="." instance=ExtResource("4_v4t0n")]
+
+[node name="Array" type="Node" parent="."]
+script = ExtResource("5_pta1y")
+
+[node name="Symbol 1" type="Sprite2D" parent="."]
+position = Vector2(600, 300)
+scale = Vector2(0.094, 0.094)
+texture = ExtResource("6_svbbo")
+script = ExtResource("7_v4t0n")
+
+[node name="Symbol 2" type="Sprite2D" parent="."]
+position = Vector2(600, 400)
+scale = Vector2(0.094, 0.094)
+texture = ExtResource("6_svbbo")
+script = ExtResource("7_v4t0n")
+index = 1
+
+[node name="Symbol 3" type="Sprite2D" parent="."]
+position = Vector2(600, 500)
+scale = Vector2(0.094, 0.094)
+texture = ExtResource("6_svbbo")
+script = ExtResource("7_v4t0n")
+index = 2
+
+[node name="Symbol 4" type="Sprite2D" parent="."]
+position = Vector2(600, 600)
+scale = Vector2(0.094, 0.094)
+texture = ExtResource("6_svbbo")
+script = ExtResource("7_v4t0n")
+index = 3
+
+[node name="Symbol 5" type="Sprite2D" parent="."]
+position = Vector2(1000, 300)
+scale = Vector2(0.094, 0.094)
+texture = ExtResource("6_svbbo")
+script = ExtResource("8_ntrfe")
+
+[node name="Symbol 6" type="Sprite2D" parent="."]
+position = Vector2(1000, 400)
+scale = Vector2(0.094, 0.094)
+texture = ExtResource("6_svbbo")
+script = ExtResource("8_ntrfe")
+index = 1
+
+[node name="Symbol 7" type="Sprite2D" parent="."]
+position = Vector2(1000, 500)
+scale = Vector2(0.094, 0.094)
+texture = ExtResource("6_svbbo")
+script = ExtResource("8_ntrfe")
+index = 2
+
+[node name="Symbol 8" type="Sprite2D" parent="."]
+position = Vector2(1000, 600)
+scale = Vector2(0.094, 0.094)
+texture = ExtResource("6_svbbo")
+script = ExtResource("8_ntrfe")
+index = 3
