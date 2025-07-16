@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgx1imjkfolew"]
+
+[ext_resource type="Script" uid="uid://bimlo53aoltyu" path="res://Levels/Rooms/Basement/basement.gd" id="1_tvl1v"]
+[ext_resource type="Texture2D" uid="uid://chmbqsllalv3m" path="res://Assets/Sprites/Room Background/BASEMENT.png" id="2_whp5p"]
+[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="3_3w624"]
+[ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="4_m56nm"]
+[ext_resource type="Texture2D" uid="uid://cg6pdpvt7pkds" path="res://Assets/Sprites/Door Objects/BACKYARD.png" id="5_w4o5f"]
+
+[node name="Basement" type="Node2D"]
+script = ExtResource("1_tvl1v")
+indoorObeliskPos = Vector2(500, 300)
+hollyWaterPos = Vector2(800, 300)
+metadata/_custom_type_script = "uid://dfrts4mmbagjl"
+
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_whp5p")
+
+[node name="Timer UI" parent="." instance=ExtResource("3_3w624")]
+
+[node name="Backyard Door" parent="." instance=ExtResource("4_m56nm")]
+position = Vector2(980, 828)
+room = "uid://c0noph186iboi"
+
+[node name="Sprite2D" parent="Backyard Door" index="1"]
+texture = ExtResource("5_w4o5f")
+
+[editable path="Backyard Door"]

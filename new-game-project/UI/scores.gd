@@ -21,14 +21,32 @@ func _ready() -> void:
 func timerTimeout():
 	time -= 1
 
+func finish(parent: String):
+	if parent == "Computer Desktop":
+		TaskSpawner.ComputerDesktopCompleted = true
+	elif parent == "Dishes":
+		TaskSpawner.DishesCompleted = true
+	elif parent == "Fold Clothes":
+		TaskSpawner.FoldClothesCompleted = true
+	elif parent == "Holy Water":
+		TaskSpawner.HolyWaterCompleted = true
+	elif parent == "Indoor Obelisk":
+		TaskSpawner.IndoorObeliskCompleted = true
+	elif parent == "Straighten Picture Frames":
+		TaskSpawner.PictureFrameCompleted = true
+	elif parent == "Take Trash Out":
+		TaskSpawner.TrashCompleted = true
+	elif parent == "Walk Lizard":
+		TaskSpawner.WalkLizardCompleted = true
+	GlobalTimer.total_time += score * scoreMultiplier
+	get_tree().change_scene_to_file(room)
+
 func _process(delta: float) -> void:
 	label.text = '%02d\n%02d' % [time, score]
 	if time == 0:
-		GlobalTimer.total_time += score * scoreMultiplier
-		get_tree().change_scene_to_file(room)
+		finish(get_parent().name)
 	
 	if autoFinish and score == finishScore:
 		if timedScore:
 			GlobalTimer.total_time += time * timedScoreMultiplier
-		GlobalTimer.total_time += score * scoreMultiplier
-		get_tree().change_scene_to_file(room)
+		finish(get_parent().name)

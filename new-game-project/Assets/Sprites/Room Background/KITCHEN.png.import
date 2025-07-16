@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0pbj6nn1v68f"
-path="res://.godot/imported/Bar.png-dc5f767bf407e2eae1299a332513a758.ctex"
+uid="uid://d36he0xq17huo"
+path="res://.godot/imported/KITCHEN.png-6d12f844e18c892d135a9788cc461a4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Bar.png"
-dest_files=["res://.godot/imported/Bar.png-dc5f767bf407e2eae1299a332513a758.ctex"]
+source_file="res://Assets/Sprites/Room Background/KITCHEN.png"
+dest_files=["res://.godot/imported/KITCHEN.png-6d12f844e18c892d135a9788cc461a4b.ctex"]
 
 [params]
 

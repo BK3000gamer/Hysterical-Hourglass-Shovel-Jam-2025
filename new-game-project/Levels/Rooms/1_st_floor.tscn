@@ -1,22 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://dafpxex175r24"]
+[gd_scene load_steps=8 format=3 uid="uid://dafpxex175r24"]
 
 [ext_resource type="Script" uid="uid://dfrts4mmbagjl" path="res://Levels/Rooms/room.gd" id="1_jagaf"]
 [ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="2_6le83"]
+[ext_resource type="Texture2D" uid="uid://cm2unc3una405" path="res://Assets/Sprites/Room Background/1ST_FLOOR.png" id="2_ol71u"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="3_wxgsl"]
+[ext_resource type="Texture2D" uid="uid://eg1ecxam60pm" path="res://Assets/Sprites/Door Objects/LIVING_ROOM.png" id="4_jg57g"]
+[ext_resource type="Texture2D" uid="uid://cnoiakw55pao4" path="res://Assets/Sprites/Door Objects/FRONTYARD.png" id="5_ol71u"]
+[ext_resource type="Texture2D" uid="uid://vo0mwr11ymht" path="res://Assets/Sprites/Door Objects/2ND_FLOOR.png" id="6_7j0ie"]
 
 [node name="1st Floor" type="Node2D"]
 script = ExtResource("1_jagaf")
 metadata/_custom_type_script = "uid://dfrts4mmbagjl"
 
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ol71u")
+
 [node name="Timer UI" parent="." instance=ExtResource("3_wxgsl")]
 
 [node name="Living Room Door" parent="." instance=ExtResource("2_6le83")]
-position = Vector2(781, 508)
+position = Vector2(931, 776)
 room = "uid://d2pfqdgmod8yk"
 
+[node name="Button" parent="Living Room Door" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" parent="Living Room Door" index="1"]
+texture = ExtResource("4_jg57g")
+
 [node name="Frontyard Door" parent="." instance=ExtResource("2_6le83")]
-position = Vector2(1511, 608)
+position = Vector2(1511, 782)
 room = "uid://bj1ksxf7fwjtb"
 
+[node name="Sprite2D" parent="Frontyard Door" index="1"]
+texture = ExtResource("5_ol71u")
+
 [node name="2nd Floor Door" parent="." instance=ExtResource("2_6le83")]
+position = Vector2(317, 786)
 room = "uid://6hbswx1wbmqk"
+
+[node name="Sprite2D" parent="2nd Floor Door" index="1"]
+texture = ExtResource("6_7j0ie")
+
+[editable path="Living Room Door"]
+[editable path="Frontyard Door"]
+[editable path="2nd Floor Door"]

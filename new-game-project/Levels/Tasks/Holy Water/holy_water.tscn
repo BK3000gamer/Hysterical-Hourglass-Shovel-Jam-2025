@@ -27,7 +27,13 @@ grow_vertical = 2
 texture = ExtResource("2_a6q0f")
 
 [node name="Scores" parent="." instance=ExtResource("3_35p2s")]
+time = 30
 scoreMultiplier = 5
+autoFinish = true
+finishScore = 15
+timedScore = true
+timedScoreMultiplier = 1
+room = "uid://dgx1imjkfolew"
 
 [node name="Timer UI" parent="." instance=ExtResource("4_ly11a")]
 

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://xf5xis2kjayu"]
+
+[ext_resource type="PackedScene" uid="uid://d0lbuyi5bs18u" path="res://Entities/task_object.tscn" id="1_a4b4w"]
+[ext_resource type="Texture2D" uid="uid://djw8fajj1vb1y" path="res://Assets/Sprites/Task Objects/TRASH.png" id="2_gm6qn"]
+
+[node name="Take Trash Out" instance=ExtResource("1_a4b4w")]
+task = "uid://dmcfhdrgjaqqw"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_gm6qn")

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 SignalBus="*res://Common/Singleton/signal_bus.gd"
 GlobalTimer="*res://Common/Singleton/global_timer.gd"
+TaskSpawner="*res://Common/Singleton/task_spawner.gd"
 
 [display]
 

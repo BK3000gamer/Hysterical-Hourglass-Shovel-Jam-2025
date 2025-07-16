@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ptv1acf7p7xi"]
+
+[ext_resource type="PackedScene" uid="uid://d0lbuyi5bs18u" path="res://Entities/task_object.tscn" id="1_tgt4m"]
+[ext_resource type="Texture2D" uid="uid://j7yjinod0pv6" path="res://Assets/Sprites/Task Objects/FOLD_CLOTHES.png" id="2_p0ibd"]
+
+[node name="Fold Clothes" instance=ExtResource("1_tgt4m")]
+task = "uid://bvospwsyr7diq"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_p0ibd")

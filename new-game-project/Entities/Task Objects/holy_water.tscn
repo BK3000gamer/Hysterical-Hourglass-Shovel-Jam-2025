@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://df1ydionqhu58"]
+
+[ext_resource type="PackedScene" uid="uid://d0lbuyi5bs18u" path="res://Entities/task_object.tscn" id="1_f21fk"]
+[ext_resource type="Texture2D" uid="uid://dr7ws65fajt1q" path="res://Assets/Sprites/Task Objects/HOLY_WATER.png" id="2_shlft"]
+
+[node name="Holy Water" instance=ExtResource("1_f21fk")]
+task = "uid://fa47bptauwcs"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_shlft")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ycosp8prbbom"]
+
+[ext_resource type="PackedScene" uid="uid://d0lbuyi5bs18u" path="res://Entities/task_object.tscn" id="1_5x3a3"]
+[ext_resource type="Texture2D" uid="uid://bffnx5hxhv62p" path="res://Assets/Sprites/Task Objects/WALK LIZARD.png" id="2_dgk76"]
+
+[node name="Walk Lizard" instance=ExtResource("1_5x3a3")]
+task = "uid://d1h62h6mt525j"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_dgk76")

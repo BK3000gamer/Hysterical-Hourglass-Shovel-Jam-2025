@@ -26,6 +26,7 @@ texture = ExtResource("2_pta1y")
 
 [node name="Scores" parent="." instance=ExtResource("3_svbbo")]
 scoreMultiplier = 5
+room = "uid://dgx1imjkfolew"
 
 [node name="Timer UI" parent="." instance=ExtResource("4_v4t0n")]
 

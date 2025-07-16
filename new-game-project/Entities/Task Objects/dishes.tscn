@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk6j1pmxk1a5y"]
+
+[ext_resource type="PackedScene" uid="uid://d0lbuyi5bs18u" path="res://Entities/task_object.tscn" id="1_x45fj"]
+[ext_resource type="Texture2D" uid="uid://d0jvgwbk7vcbo" path="res://Assets/Sprites/Task Objects/DISHES.png" id="2_aurxr"]
+
+[node name="Dishes" instance=ExtResource("1_x45fj")]
+task = "uid://cyjwfjr67als8"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_aurxr")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://sgod0mkuwwce"]
+
+[ext_resource type="PackedScene" uid="uid://d0lbuyi5bs18u" path="res://Entities/task_object.tscn" id="1_p2q0e"]
+[ext_resource type="Texture2D" uid="uid://dvw4r2fg0cwqc" path="res://Assets/Sprites/Task Objects/INDOOR_OBELISK.png" id="2_vl2oi"]
+
+[node name="Indoor Obelisk" instance=ExtResource("1_p2q0e")]
+task = "uid://8ifoi48nlq24"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_vl2oi")

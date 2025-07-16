@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b23q8tn2117mx"]
+
+[ext_resource type="PackedScene" uid="uid://d0lbuyi5bs18u" path="res://Entities/task_object.tscn" id="1_ub2us"]
+[ext_resource type="Texture2D" uid="uid://xqmakhlchnnr" path="res://Assets/Sprites/Task Objects/COMPUTER_DESKTOP.png" id="2_ycjqy"]
+
+[node name="Computer Desktop" instance=ExtResource("1_ub2us")]
+task = "uid://cg0b8fe3r8xpr"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_ycjqy")

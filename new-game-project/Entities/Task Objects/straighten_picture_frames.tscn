@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b423tcl4gwn0g"]
+
+[ext_resource type="PackedScene" uid="uid://d0lbuyi5bs18u" path="res://Entities/task_object.tscn" id="1_8x5od"]
+[ext_resource type="Texture2D" uid="uid://o6csa2x8tn75" path="res://Assets/Sprites/Task Objects/PICTURE_FRAME.png" id="2_sjj6x"]
+
+[node name="Straighten Picture Frames" instance=ExtResource("1_8x5od")]
+task = "uid://vhvi6qb82qrv"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_sjj6x")

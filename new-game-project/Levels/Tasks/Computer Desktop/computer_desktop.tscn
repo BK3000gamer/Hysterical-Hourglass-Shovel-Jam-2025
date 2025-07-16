@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://cg0b8fe3r8xpr"]
+[gd_scene load_steps=15 format=3 uid="uid://cg0b8fe3r8xpr"]
 
 [ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_kcmr3"]
 [ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_bc6w5"]
 [ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_d1662"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="4_443or"]
+[ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="5_21nj5"]
 [ext_resource type="Script" uid="uid://m2gl070fyuco" path="res://Levels/Tasks/Computer Desktop/file.gd" id="5_bc6w5"]
 [ext_resource type="Script" uid="uid://6lqha63wwvf1" path="res://Levels/Tasks/Computer Desktop/file_manager.gd" id="8_e1cfl"]
 [ext_resource type="Script" uid="uid://de45rlmii4d3l" path="res://Levels/Tasks/Computer Desktop/recycling_bin.gd" id="9_21nj5"]
@@ -22,7 +23,9 @@ size = Vector2(48, 48)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nrj88"]
 
 [node name="Computer Desktop" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_kcmr3")
+dialogKey = "computer desktop"
 metadata/_custom_type_script = "uid://gtgw2e6juj6o"
 
 [node name="Background" type="TextureRect" parent="."]
@@ -38,8 +41,12 @@ texture = ExtResource("2_bc6w5")
 
 [node name="Scores" parent="." instance=ExtResource("3_d1662")]
 scoreMultiplier = 10
+room = "uid://cbuwpm0vjltfd"
 
 [node name="Timer UI" parent="." instance=ExtResource("4_443or")]
+
+[node name="Dialog Player" parent="." instance=ExtResource("5_21nj5")]
+scene_text_file = "res://Assets/Dialogues/tasks.json"
 
 [node name="Border" type="StaticBody2D" parent="."]
 position = Vector2(960, 0)

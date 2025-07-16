@@ -5,12 +5,14 @@
 
 [sub_resource type="SystemFont" id="SystemFont_8mldl"]
 font_names = PackedStringArray("Montserrat")
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_8mldl"]
 font = SubResource("SystemFont_8mldl")
 font_size = 36
 
 [node name="Dialog Player" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_8mldl")
 
 [node name="Background" type="TextureRect" parent="."]

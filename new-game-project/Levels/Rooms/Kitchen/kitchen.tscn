@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://dghm0atvqrg70"]
+
+[ext_resource type="Script" uid="uid://co2sfuo8wf1qk" path="res://Levels/Rooms/Kitchen/kitchen.gd" id="1_37a3f"]
+[ext_resource type="Texture2D" uid="uid://d36he0xq17huo" path="res://Assets/Sprites/Room Background/KITCHEN.png" id="2_h5qs2"]
+[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="3_x45f6"]
+[ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="4_t61kw"]
+[ext_resource type="Texture2D" uid="uid://eg1ecxam60pm" path="res://Assets/Sprites/Door Objects/LIVING_ROOM.png" id="5_phkey"]
+[ext_resource type="Texture2D" uid="uid://cg6pdpvt7pkds" path="res://Assets/Sprites/Door Objects/BACKYARD.png" id="6_bf4tr"]
+
+[node name="Kitchen" type="Node2D"]
+script = ExtResource("1_37a3f")
+trashPos = Vector2(600, 300)
+dishesPos = Vector2(900, 300)
+metadata/_custom_type_script = "uid://dfrts4mmbagjl"
+
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_h5qs2")
+
+[node name="Timer UI" parent="." instance=ExtResource("3_x45f6")]
+
+[node name="Living Room Door" parent="." instance=ExtResource("4_t61kw")]
+position = Vector2(418, 767)
+room = "uid://d2pfqdgmod8yk"
+
+[node name="Sprite2D" parent="Living Room Door" index="1"]
+texture = ExtResource("5_phkey")
+
+[node name="Backyard Door" parent="." instance=ExtResource("4_t61kw")]
+position = Vector2(1510, 754)
+room = "uid://c0noph186iboi"
+
+[node name="Sprite2D" parent="Backyard Door" index="1"]
+texture = ExtResource("6_bf4tr")
+
+[editable path="Living Room Door"]
+[editable path="Backyard Door"]
