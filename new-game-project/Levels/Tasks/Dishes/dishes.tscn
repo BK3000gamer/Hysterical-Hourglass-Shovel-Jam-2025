@@ -1,14 +1,17 @@
 [gd_scene load_steps=7 format=3 uid="uid://cyjwfjr67als8"]
 
-[ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="1_ciqco"]
 [ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_s8qob"]
 [ext_resource type="Script" uid="uid://dskmd6mx6x58w" path="res://Levels/Tasks/Dishes/soap.gd" id="2_1g64e"]
+[ext_resource type="Texture2D" uid="uid://k6oyp1koddji" path="res://Levels/Tasks/Dishes/Background.png" id="2_pkbuc"]
 [ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_6g2lp"]
-[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="4_pkbuc"]
+[ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="5_hexat"]
 [ext_resource type="Texture2D" uid="uid://yakbmue38bo" path="res://Levels/Tasks/Dishes/Dirty_Plate.png" id="5_pkbuc"]
 
 [node name="Dishes" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_s8qob")
+dialogKey = "dishes"
+dialogLine = 2
 metadata/_custom_type_script = "uid://gtgw2e6juj6o"
 
 [node name="Background" type="TextureRect" parent="."]
@@ -20,14 +23,16 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_ciqco")
+texture = ExtResource("2_pkbuc")
 
 [node name="Scores" parent="." instance=ExtResource("3_6g2lp")]
 scoreMultiplier = 5
 
-[node name="Timer UI" parent="." instance=ExtResource("4_pkbuc")]
+[node name="Dialog Player" parent="." instance=ExtResource("5_hexat")]
+scene_text_file = "res://Assets/Dialogues/tasks.json"
 
 [node name="Dish" type="Node2D" parent="."]
+process_mode = 1
 position = Vector2(960, 625)
 
 [node name="Sprite2D" type="Sprite2D" parent="Dish"]

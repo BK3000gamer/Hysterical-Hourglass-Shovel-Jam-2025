@@ -1,14 +1,25 @@
-[gd_scene load_steps=14 format=3 uid="uid://bvospwsyr7diq"]
+[gd_scene load_steps=19 format=3 uid="uid://bvospwsyr7diq"]
 
 [ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_04gu6"]
-[ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_a5kgc"]
 [ext_resource type="Script" uid="uid://wsjfmx1xqxb1" path="res://Levels/Tasks/Fold Clothes/clothes_box.gd" id="3_xujwe"]
+[ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="5_xujwe"]
 [ext_resource type="Texture2D" uid="uid://bn08cghhcpb5p" path="res://Levels/Tasks/Fold Clothes/Laundry_Box.png" id="7_sxnhr"]
 [ext_resource type="Texture2D" uid="uid://c00cvi2hufjsc" path="res://Levels/Tasks/Fold Clothes/T-Shirt.png" id="8_a5kgc"]
 [ext_resource type="Script" uid="uid://q58bu7vavnhc" path="res://Levels/Tasks/Fold Clothes/clothes.gd" id="9_a5kgc"]
 [ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="11_sxnhr"]
 [ext_resource type="Script" uid="uid://clk6otkxv8y5w" path="res://Levels/Tasks/Fold Clothes/cursor.gd" id="11_ufg4w"]
-[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="12_sxnhr"]
+
+[sub_resource type="Gradient" id="Gradient_xujwe"]
+colors = PackedColorArray(0.699653, 0.699653, 0.699653, 1, 0.698039, 0.698039, 0.698039, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ufg4w"]
+gradient = SubResource("Gradient_xujwe")
+
+[sub_resource type="Gradient" id="Gradient_a5kgc"]
+colors = PackedColorArray(0.54902, 0.54902, 0.54902, 1, 0.548963, 0.548963, 0.548963, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xujwe"]
+gradient = SubResource("Gradient_a5kgc")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oguuq"]
 size = Vector2(150, 172)
@@ -27,11 +38,26 @@ fill_from = Vector2(0.5, 0.5)
 radius = 36.0
 height = 114.0
 
+[sub_resource type="Gradient" id="Gradient_04gu6"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.629442, 0.675127)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_a5kgc"]
+gradient = SubResource("Gradient_04gu6")
+width = 96
+height = 96
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="Fold Clothes" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_04gu6")
+dialogKey = "clothes"
+dialogLine = 2
 metadata/_custom_type_script = "uid://gtgw2e6juj6o"
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background2" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,15 +66,31 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_a5kgc")
+scale = Vector2(1, 0.72)
+texture = SubResource("GradientTexture2D_ufg4w")
+
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 300.0
+offset_right = 1920.0
+offset_bottom = 1380.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.72)
+texture = SubResource("GradientTexture2D_xujwe")
 
 [node name="Scores" parent="." instance=ExtResource("11_sxnhr")]
 scoreMultiplier = 2
 room = "uid://bstqgq8pxmtjo"
 
-[node name="Timer UI" parent="." instance=ExtResource("12_sxnhr")]
+[node name="Dialog Player" parent="." instance=ExtResource("5_xujwe")]
+scene_text_file = "res://Assets/Dialogues/tasks.json"
 
 [node name="Black Box" type="Area2D" parent="."]
+process_mode = 1
 position = Vector2(450, 685)
 collision_mask = 0
 script = ExtResource("3_xujwe")
@@ -62,6 +104,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_sxnhr")
 
 [node name="White Box" type="Area2D" parent="."]
+process_mode = 1
 position = Vector2(1470, 685)
 collision_mask = 0
 script = ExtResource("3_xujwe")
@@ -76,6 +119,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_sxnhr")
 
 [node name="Red Box" type="Area2D" parent="."]
+process_mode = 1
 position = Vector2(625, 400)
 collision_mask = 0
 script = ExtResource("3_xujwe")
@@ -90,6 +134,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_sxnhr")
 
 [node name="Green Box" type="Area2D" parent="."]
+process_mode = 1
 position = Vector2(960, 300)
 collision_mask = 0
 script = ExtResource("3_xujwe")
@@ -104,6 +149,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_sxnhr")
 
 [node name="Blue Box" type="Area2D" parent="."]
+process_mode = 1
 position = Vector2(1295, 400)
 collision_mask = 0
 script = ExtResource("3_xujwe")
@@ -118,6 +164,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_sxnhr")
 
 [node name="Clothes" type="CharacterBody2D" parent="."]
+process_mode = 1
 position = Vector2(960, 800)
 collision_layer = 0
 script = ExtResource("9_a5kgc")
@@ -127,6 +174,7 @@ scale = Vector2(2, 1.3)
 texture = SubResource("GradientTexture2D_sxnhr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Clothes"]
+position = Vector2(0, 11)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_a5kgc")
 
@@ -138,14 +186,16 @@ shape = SubResource("CapsuleShape2D_ufg4w")
 debug_color = Color(1, 0, 0.0931407, 0.42)
 
 [node name="Cursor" type="Node2D" parent="."]
+process_mode = 1
 position = Vector2(960, 800)
 script = ExtResource("11_ufg4w")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cursor"]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_a5kgc")
+texture = SubResource("GradientTexture2D_a5kgc")
 
 [node name="Button" type="Button" parent="Cursor"]
+self_modulate = Color(1, 1, 1, 0)
 offset_left = -32.0
 offset_top = -32.0
 offset_right = 32.0

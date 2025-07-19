@@ -6,11 +6,9 @@ var scene_text: Dictionary = {}
 var selected_text: Array = []
 var in_progress: bool = false
 
-@onready var background = $Background
 @onready var text_label = $"Text Label"
 
 func _ready() -> void:
-	background.visible = false
 	scene_text = load_scene_text()
 	SignalBus.connect("display_dialog", Callable(self, "on_display_dialog"))
 
@@ -32,7 +30,6 @@ func next_line():
 
 func finish():
 	text_label.text = ""
-	background.visible = false
 	in_progress = false
 	get_tree().paused = false
 
@@ -41,7 +38,6 @@ func on_display_dialog(text_key):
 		next_line()
 	else:
 		get_tree().paused = true
-		background.visible = true
 		in_progress = true
 		selected_text = scene_text[text_key].duplicate()
 		show_text()

@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://db6kod2ebfgs"]
+[gd_scene load_steps=4 format=3 uid="uid://db6kod2ebfgs"]
 
 [ext_resource type="Script" uid="uid://dutdhapt4pg4i" path="res://UI/dialog_player.gd" id="1_8mldl"]
-[ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="1_h2akf"]
 
 [sub_resource type="SystemFont" id="SystemFont_8mldl"]
 font_names = PackedStringArray("Montserrat")
@@ -9,25 +8,11 @@ subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_8mldl"]
 font = SubResource("SystemFont_8mldl")
-font_size = 36
+font_size = 32
 
 [node name="Dialog Player" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_8mldl")
-
-[node name="Background" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(1200, 300)
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.95
-anchor_right = 0.5
-anchor_bottom = 0.95
-offset_left = -600.0
-offset_top = -300.0
-offset_right = 600.0
-grow_horizontal = 2
-grow_vertical = 0
-texture = ExtResource("1_h2akf")
 
 [node name="Text Label" type="Label" parent="."]
 custom_minimum_size = Vector2(1150, 250)
@@ -36,10 +21,14 @@ anchor_left = 0.5
 anchor_top = 0.925
 anchor_right = 0.5
 anchor_bottom = 0.925
-offset_left = -575.0
-offset_top = -250.0
-offset_right = 575.0
+offset_left = -864.0
+offset_top = -169.0
+offset_right = 864.0
+offset_bottom = 81.0
 grow_horizontal = 2
 grow_vertical = 0
+pivot_offset = Vector2(864, 0)
 label_settings = SubResource("LabelSettings_8mldl")
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2

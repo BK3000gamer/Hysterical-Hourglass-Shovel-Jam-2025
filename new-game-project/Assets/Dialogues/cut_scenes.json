@@ -1,0 +1,14 @@
+{
+    "start game": [
+        "You have been awoken by the vile sound of your digital alarm.",
+        "As the fog of sleep clears, you find that your dismay at the prospect of being awake only deepens as you remember the responsibilities that await you in the day.",
+        "You have been putting off a so-called “loving your work” course that you are required to do by your employer for weeks now but the deadline is looming and it's getting harder to avoid doing it.",
+        "You decide to see how much you can get done around the house before the course becomes just too hard to ignore."
+    ],
+    "failed": [
+        ""
+    ],
+    "end game": [
+        ""
+    ]
+}

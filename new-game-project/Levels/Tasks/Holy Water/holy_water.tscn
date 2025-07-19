@@ -28,7 +28,7 @@ texture = ExtResource("2_a6q0f")
 
 [node name="Scores" parent="." instance=ExtResource("3_35p2s")]
 time = 30
-scoreMultiplier = 5
+scoreMultiplier = 3
 autoFinish = true
 finishScore = 15
 timedScore = true

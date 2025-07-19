@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch6nr7gp1x472"]
+
+[ext_resource type="Script" uid="uid://bcc4uh1kskonr" path="res://Levels/Cut Scene/cut_scene.gd" id="1_tu0r2"]
+
+[node name="Cut Scene" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_tu0r2")

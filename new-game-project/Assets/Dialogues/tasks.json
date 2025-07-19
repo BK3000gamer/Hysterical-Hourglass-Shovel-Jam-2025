@@ -2,5 +2,18 @@
 	"computer desktop": [
 		"Fist line",
 		"Second line"
+	],
+	"clothes": [
+		"While you're doing your laundry you figure you’d better sort your shirts by colour while you're at it.",
+		"Just toss ‘em in the corresponding box."
+	],
+	"dishes": [
+		"You haven't the slightest clue what you ate off of this plate or why it looks like this but it definitely needs a scrub.",
+		" If you put it in the dishwasher the way it is, the machine would probably call you a slur."
+	],
+	"trash": [
+		"Sorting your rubbish substances can’t be that hard right?",
+		"Just sort the recyclables into the recycle bin, your compost into the compost bin and everything else into the other one.",
+		"What do you even call the other one anyway? Landfill I guess? Oh well just sort your rubbish."
 	]
 }

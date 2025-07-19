@@ -5,3 +5,7 @@ class_name Rooms
 
 func _ready() -> void:
 	SignalBus.emit_signal("display_dialog", dialogKey)
+
+func _process(delta: float) -> void:
+	if GlobalTimer.time == 0:
+		print("timeout")

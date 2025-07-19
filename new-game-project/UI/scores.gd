@@ -38,7 +38,10 @@ func finish(parent: String):
 		TaskSpawner.TrashCompleted = true
 	elif parent == "Walk Lizard":
 		TaskSpawner.WalkLizardCompleted = true
-	GlobalTimer.total_time += score * scoreMultiplier
+	GlobalTimer.totalTime += score * scoreMultiplier
+	GlobalTimer.time = 120
+	GlobalTimer.timer.one_shot = false
+	GlobalTimer.timer.start()
 	get_tree().change_scene_to_file(room)
 
 func _process(delta: float) -> void:
@@ -48,5 +51,5 @@ func _process(delta: float) -> void:
 	
 	if autoFinish and score == finishScore:
 		if timedScore:
-			GlobalTimer.total_time += time * timedScoreMultiplier
+			GlobalTimer.totalTime += time * timedScoreMultiplier
 		finish(get_parent().name)

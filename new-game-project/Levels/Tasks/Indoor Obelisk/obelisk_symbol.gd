@@ -1,10 +1,10 @@
 extends Sprite2D
 
 @onready var array = $"../Array"
-var tex1  = preload("res://Assets/Textures/Green/texture_09.png")
-var tex2  = preload("res://Assets/Textures/Orange/texture_09.png")
-var tex3  = preload("res://Assets/Textures/Purple/texture_09.png")
-var tex4  = preload("res://Assets/Textures/Red/texture_09.png")
+var tex1  = preload("res://Levels/Tasks/Indoor Obelisk/Up.png")
+var tex2  = preload("res://Levels/Tasks/Indoor Obelisk/Down.png")
+var tex3  = preload("res://Levels/Tasks/Indoor Obelisk/Left.png")
+var tex4  = preload("res://Levels/Tasks/Indoor Obelisk/Right.png")
 
 @export var index: int
 

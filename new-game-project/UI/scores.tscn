@@ -1,17 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://c8lw7cpbrv5r3"]
 
 [ext_resource type="Script" uid="uid://d4nekkdsy4v0d" path="res://UI/scores.gd" id="1_oe5sd"]
-
-[sub_resource type="SystemFont" id="SystemFont_fg388"]
-font_names = PackedStringArray("Montserrat")
-font_weight = 600
-subpixel_positioning = 0
+[ext_resource type="FontFile" uid="uid://s8hv0pcp2iro" path="res://Assets/Fonts/Vipnagorgialla Bd It.otf" id="2_oxsq3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a5kgc"]
-font = SubResource("SystemFont_fg388")
+font = ExtResource("2_oxsq3")
 font_size = 64
 
 [node name="Scores" type="CanvasLayer"]
+process_mode = 1
 script = ExtResource("1_oe5sd")
 time = 60
 room = "uid://dghm0atvqrg70"

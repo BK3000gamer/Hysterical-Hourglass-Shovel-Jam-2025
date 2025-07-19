@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_crr54"]
 [ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_3i0jy"]
+[ext_resource type="Texture2D" uid="uid://crlsxh7yrx4vw" path="res://Levels/Tasks/Walk Lizard/Background-01.png" id="2_f637s"]
 [ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_x6bms"]
-[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="4_f637s"]
 [ext_resource type="Script" uid="uid://cbdpmfdjq7iee" path="res://Levels/Tasks/Walk Lizard/lizard.gd" id="5_3i0jy"]
 [ext_resource type="Script" uid="uid://rivodsdfqdoa" path="res://Levels/Tasks/Walk Lizard/border.gd" id="6_x6bms"]
 
@@ -26,14 +26,12 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_3i0jy")
+texture = ExtResource("2_f637s")
 
 [node name="Scores" parent="." instance=ExtResource("3_x6bms")]
 scoreMultiplier = 10
 autoFinish = true
 room = "uid://bj1ksxf7fwjtb"
-
-[node name="Timer UI" parent="." instance=ExtResource("4_f637s")]
 
 [node name="Lizard" type="CharacterBody2D" parent="."]
 position = Vector2(1500, 540)

@@ -1,20 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://cm10bkdq5b4in"]
 
 [ext_resource type="Script" uid="uid://b45yr4h71dug0" path="res://UI/timer_ui.gd" id="1_3ixk1"]
-
-[sub_resource type="SystemFont" id="SystemFont_3ixk1"]
-font_names = PackedStringArray("Montserrat")
-font_weight = 600
+[ext_resource type="FontFile" uid="uid://c0fgwl3ojrlqm" path="res://Assets/Fonts/E1234.ttf" id="2_psf8e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ixk1"]
-font = SubResource("SystemFont_3ixk1")
-font_size = 64
+font = ExtResource("2_psf8e")
+font_size = 48
+font_color = Color(1, 0, 0, 1)
 
 [node name="Timer UI" type="CanvasLayer"]
+process_mode = 1
 script = ExtResource("1_3ixk1")
 
 [node name="Label" type="Label" parent="."]
 custom_minimum_size = Vector2(200, 100)
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 4.0
+offset_top = 14.0
+offset_right = 260.0
+offset_bottom = 114.0
 label_settings = SubResource("LabelSettings_3ixk1")
+vertical_alignment = 3
