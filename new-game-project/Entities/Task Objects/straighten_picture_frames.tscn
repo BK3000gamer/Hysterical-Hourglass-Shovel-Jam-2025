@@ -7,4 +7,11 @@
 task = "uid://vhvi6qb82qrv"
 
 [node name="Sprite2D" parent="." index="0"]
+visible = false
 texture = ExtResource("2_sjj6x")
+
+[node name="Button" parent="." index="1"]
+offset_left = -91.0
+offset_top = -58.0
+offset_right = 90.0
+offset_bottom = 56.0

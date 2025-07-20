@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbuwpm0vjltfd"]
+[gd_scene load_steps=5 format=3 uid="uid://cbuwpm0vjltfd"]
 
 [ext_resource type="Script" uid="uid://ouxts6js32vw" path="res://Levels/Rooms/Office/office.gd" id="1_qkiey"]
-[ext_resource type="Texture2D" uid="uid://d3j64367hstte" path="res://Assets/Sprites/Room Background/OFFICE.png" id="2_sr100"]
+[ext_resource type="Texture2D" uid="uid://dyg5q1grkebte" path="res://Levels/Rooms/Office/Background.png" id="2_fabdn"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="3_uckc1"]
 [ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="4_m8lvv"]
-[ext_resource type="Texture2D" uid="uid://vo0mwr11ymht" path="res://Assets/Sprites/Door Objects/2ND_FLOOR.png" id="5_phclm"]
 
 [node name="Office" type="Node2D"]
 script = ExtResource("1_qkiey")
@@ -20,15 +19,12 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_sr100")
+texture = ExtResource("2_fabdn")
 
 [node name="Timer UI" parent="." instance=ExtResource("3_uckc1")]
 
 [node name="2nd Floor Door" parent="." instance=ExtResource("4_m8lvv")]
 position = Vector2(997, 786)
 room = "uid://6hbswx1wbmqk"
-
-[node name="Sprite2D" parent="2nd Floor Door" index="1"]
-texture = ExtResource("5_phclm")
 
 [editable path="2nd Floor Door"]

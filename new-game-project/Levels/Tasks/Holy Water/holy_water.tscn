@@ -1,13 +1,36 @@
-[gd_scene load_steps=9 format=3 uid="uid://fa47bptauwcs"]
+[gd_scene load_steps=16 format=3 uid="uid://fa47bptauwcs"]
 
 [ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_mw8cw"]
-[ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_a6q0f"]
 [ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_35p2s"]
-[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="4_ly11a"]
 [ext_resource type="Script" uid="uid://dabk64pxi5c0i" path="res://Levels/Tasks/Holy Water/cursor.gd" id="5_35p2s"]
 [ext_resource type="Script" uid="uid://davyiswudldkc" path="res://Levels/Tasks/Holy Water/range.gd" id="5_a6q0f"]
+[ext_resource type="Texture2D" uid="uid://bn20msgwog0r" path="res://Levels/Tasks/Holy Water/Holy Water.png" id="5_ly11a"]
+
+[sub_resource type="Gradient" id="Gradient_mw8cw"]
+colors = PackedColorArray(0.385493, 0.385492, 0.385492, 1, 0.385493, 0.385492, 0.385492, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_a6q0f"]
+gradient = SubResource("Gradient_mw8cw")
+
+[sub_resource type="Gradient" id="Gradient_h7fm2"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pcnqh"]
+gradient = SubResource("Gradient_h7fm2")
+
+[sub_resource type="Gradient" id="Gradient_35p2s"]
+colors = PackedColorArray(1, 0.439216, 0, 1, 1, 0.439216, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ly11a"]
+gradient = SubResource("Gradient_35p2s")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw8cw"]
+
+[sub_resource type="Gradient" id="Gradient_64ugj"]
+colors = PackedColorArray(0, 0.580392, 1, 1, 0, 0.580392, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mokhp"]
+gradient = SubResource("Gradient_64ugj")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35p2s"]
 
@@ -24,7 +47,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_a6q0f")
+texture = SubResource("GradientTexture2D_a6q0f")
 
 [node name="Scores" parent="." instance=ExtResource("3_35p2s")]
 time = 30
@@ -35,7 +58,10 @@ timedScore = true
 timedScoreMultiplier = 1
 room = "uid://dgx1imjkfolew"
 
-[node name="Timer UI" parent="." instance=ExtResource("4_ly11a")]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1300, 550)
+scale = Vector2(0.96, 10.5)
+texture = SubResource("GradientTexture2D_pcnqh")
 
 [node name="Range" type="Area2D" parent="."]
 position = Vector2(1300, 0)
@@ -43,8 +69,8 @@ scale = Vector2(0.8, 1)
 script = ExtResource("5_a6q0f")
 
 [node name="Sprite2D" type="Sprite2D" parent="Range"]
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_a6q0f")
+scale = Vector2(1.2, 1.2)
+texture = SubResource("GradientTexture2D_ly11a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
 scale = Vector2(4, 4)
@@ -57,12 +83,18 @@ script = ExtResource("5_35p2s")
 speed = 200.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Cursor"]
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("2_a6q0f")
+position = Vector2(1.52588e-05, 0)
+scale = Vector2(1.25, 1.25)
+texture = SubResource("GradientTexture2D_mokhp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cursor"]
 scale = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_35p2s")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(707, 556)
+scale = Vector2(1.65829, 1.65829)
+texture = ExtResource("5_ly11a")
 
 [connection signal="body_entered" from="Range" to="Range" method="_on_body_entered"]
 [connection signal="body_exited" from="Range" to="Range" method="_on_body_exited"]

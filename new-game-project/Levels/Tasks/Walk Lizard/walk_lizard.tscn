@@ -1,11 +1,50 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1h62h6mt525j"]
+[gd_scene load_steps=17 format=3 uid="uid://d1h62h6mt525j"]
 
 [ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_crr54"]
-[ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_3i0jy"]
 [ext_resource type="Texture2D" uid="uid://crlsxh7yrx4vw" path="res://Levels/Tasks/Walk Lizard/Background-01.png" id="2_f637s"]
 [ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_x6bms"]
 [ext_resource type="Script" uid="uid://cbdpmfdjq7iee" path="res://Levels/Tasks/Walk Lizard/lizard.gd" id="5_3i0jy"]
+[ext_resource type="Texture2D" uid="uid://dgdh65y33bxaa" path="res://Levels/Tasks/Walk Lizard/Lizard_0000.png" id="5_ufpba"]
+[ext_resource type="Texture2D" uid="uid://df7kikx0x0mht" path="res://Levels/Tasks/Walk Lizard/Lizard_0001.png" id="6_5c2tp"]
 [ext_resource type="Script" uid="uid://rivodsdfqdoa" path="res://Levels/Tasks/Walk Lizard/border.gd" id="6_x6bms"]
+[ext_resource type="Texture2D" uid="uid://bog0kdpk604jj" path="res://Levels/Tasks/Walk Lizard/Lizard_0002.png" id="7_4hkyk"]
+[ext_resource type="Texture2D" uid="uid://cu108p42f1m4y" path="res://Levels/Tasks/Walk Lizard/Lizard_0003.png" id="8_mprcy"]
+[ext_resource type="Texture2D" uid="uid://cb6b5tlb7byty" path="res://Levels/Tasks/Walk Lizard/Lizard_0004.png" id="9_4eor8"]
+[ext_resource type="Texture2D" uid="uid://8pvvt8e800rj" path="res://Levels/Tasks/Walk Lizard/Lizard_0005.png" id="10_08jay"]
+[ext_resource type="Texture2D" uid="uid://di26dbye6gbcm" path="res://Levels/Tasks/Walk Lizard/Lizard_0006.png" id="11_34o1y"]
+[ext_resource type="Texture2D" uid="uid://bt2jvjujyr4wn" path="res://Levels/Tasks/Walk Lizard/Lizard_0007.png" id="12_g67mk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_64dck"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ufpba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5c2tp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4hkyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mprcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4eor8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_08jay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_34o1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_g67mk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3i0jy"]
 size = Vector2(376, 120)
@@ -40,9 +79,12 @@ collision_mask = 4
 script = ExtResource("5_3i0jy")
 speed = 150.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Lizard"]
-scale = Vector2(3, 1)
-texture = ExtResource("2_3i0jy")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Lizard"]
+position = Vector2(0, 76)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_64dck")
+autoplay = "default"
+frame_progress = 0.229783
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lizard"]
 shape = SubResource("RectangleShape2D_3i0jy")

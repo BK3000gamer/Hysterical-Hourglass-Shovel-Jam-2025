@@ -1,12 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0noph186iboi"]
+[gd_scene load_steps=5 format=3 uid="uid://c0noph186iboi"]
 
 [ext_resource type="Script" uid="uid://dfrts4mmbagjl" path="res://Levels/Rooms/room.gd" id="1_isixs"]
 [ext_resource type="Texture2D" uid="uid://dh7afjifpmea2" path="res://Assets/Sprites/Room Background/BACKYARD.png" id="2_opbri"]
 [ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="2_voe63"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="3_opbri"]
-[ext_resource type="Texture2D" uid="uid://eg1ecxam60pm" path="res://Assets/Sprites/Door Objects/LIVING_ROOM.png" id="5_5mnuy"]
-[ext_resource type="Texture2D" uid="uid://cuh65qnv525a2" path="res://Assets/Sprites/Door Objects/KITCHEN.png" id="6_d1ixd"]
-[ext_resource type="Texture2D" uid="uid://ci7ajwtim1npl" path="res://Assets/Sprites/Door Objects/BASEMENT.png" id="7_ewuuo"]
 
 [node name="Backyard" type="Node2D"]
 script = ExtResource("1_isixs")
@@ -29,22 +26,13 @@ texture = ExtResource("2_opbri")
 position = Vector2(1484, 751)
 room = "uid://d2pfqdgmod8yk"
 
-[node name="Sprite2D" parent="Living Room Door" index="1"]
-texture = ExtResource("5_5mnuy")
-
 [node name="Kitchen Door" parent="." instance=ExtResource("2_voe63")]
 position = Vector2(384, 765)
 room = "uid://dghm0atvqrg70"
 
-[node name="Sprite2D" parent="Kitchen Door" index="1"]
-texture = ExtResource("6_d1ixd")
-
 [node name="Basement Door" parent="." instance=ExtResource("2_voe63")]
 position = Vector2(981, 751)
 room = "uid://dgx1imjkfolew"
-
-[node name="Sprite2D" parent="Basement Door" index="1"]
-texture = ExtResource("7_ewuuo")
 
 [editable path="Living Room Door"]
 [editable path="Kitchen Door"]

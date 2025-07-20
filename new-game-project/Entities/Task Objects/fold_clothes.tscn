@@ -7,4 +7,9 @@
 task = "uid://bvospwsyr7diq"
 
 [node name="Sprite2D" parent="." index="0"]
+visible = false
 texture = ExtResource("2_p0ibd")
+
+[node name="Button" parent="." index="1"]
+offset_left = -254.0
+offset_right = 254.0

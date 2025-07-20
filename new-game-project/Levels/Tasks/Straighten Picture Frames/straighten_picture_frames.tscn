@@ -1,10 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://vhvi6qb82qrv"]
+[gd_scene load_steps=11 format=3 uid="uid://vhvi6qb82qrv"]
 
 [ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_6hlkn"]
-[ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_yxabr"]
 [ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_xynur"]
-[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="4_i2qb5"]
 [ext_resource type="Script" uid="uid://c2qekpaocs2cj" path="res://Levels/Tasks/Straighten Picture Frames/picture.gd" id="5_yxabr"]
+[ext_resource type="Texture2D" uid="uid://cm4idyfnrimaq" path="res://Levels/Tasks/Straighten Picture Frames/Picture 1.png" id="6_xynur"]
+[ext_resource type="Texture2D" uid="uid://b1e27xwsltb0i" path="res://Levels/Tasks/Straighten Picture Frames/Picture 2.png" id="7_i2qb5"]
+[ext_resource type="Texture2D" uid="uid://c5caii53m8aqu" path="res://Levels/Tasks/Straighten Picture Frames/Picture 3.png" id="8_1flsw"]
+[ext_resource type="Texture2D" uid="uid://4r0860lfpogy" path="res://Levels/Tasks/Straighten Picture Frames/Picture 5.png" id="9_1ia83"]
+[ext_resource type="Texture2D" uid="uid://cnxdaryrkyiak" path="res://Levels/Tasks/Straighten Picture Frames/Picture 4.png" id="9_0538w"]
+
+[sub_resource type="Gradient" id="Gradient_0538w"]
+colors = PackedColorArray(0.728822, 0.728822, 0.728822, 1, 0.729412, 0.729412, 0.729412, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1ia83"]
+gradient = SubResource("Gradient_0538w")
 
 [node name="Straighten Picture Frames" type="Node2D"]
 script = ExtResource("1_6hlkn")
@@ -19,7 +28,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_yxabr")
+texture = SubResource("GradientTexture1D_1ia83")
 
 [node name="Scores" parent="." instance=ExtResource("3_xynur")]
 time = 30
@@ -30,44 +39,41 @@ timedScore = true
 timedScoreMultiplier = 1
 room = "uid://d2pfqdgmod8yk"
 
-[node name="Timer UI" parent="." instance=ExtResource("4_i2qb5")]
-
 [node name="Picture" type="Node2D" parent="."]
 position = Vector2(952, 570)
 script = ExtResource("5_yxabr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Picture"]
-scale = Vector2(2, 2.5)
-texture = ExtResource("2_yxabr")
+texture_filter = 1
+texture = ExtResource("6_xynur")
 
 [node name="Picture2" type="Node2D" parent="."]
 position = Vector2(464, 250)
 script = ExtResource("5_yxabr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Picture2"]
-scale = Vector2(2, 2.5)
-texture = ExtResource("2_yxabr")
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_i2qb5")
 
 [node name="Picture3" type="Node2D" parent="."]
-position = Vector2(1608, 250)
+position = Vector2(1546, 250)
 script = ExtResource("5_yxabr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Picture3"]
-scale = Vector2(2, 2.5)
-texture = ExtResource("2_yxabr")
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("8_1flsw")
 
 [node name="Picture4" type="Node2D" parent="."]
-position = Vector2(1480, 694)
+position = Vector2(1447, 709)
 script = ExtResource("5_yxabr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Picture4"]
-scale = Vector2(2, 2.5)
-texture = ExtResource("2_yxabr")
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("9_0538w")
 
 [node name="Picture5" type="Node2D" parent="."]
-position = Vector2(525, 730)
+position = Vector2(424, 775)
 script = ExtResource("5_yxabr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Picture5"]
-scale = Vector2(2, 2.5)
-texture = ExtResource("2_yxabr")
+texture = ExtResource("9_1ia83")

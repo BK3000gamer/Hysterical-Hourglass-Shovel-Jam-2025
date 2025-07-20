@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dmcfhdrgjaqqw"]
+[gd_scene load_steps=11 format=3 uid="uid://dmcfhdrgjaqqw"]
 
 [ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_as5vy"]
+[ext_resource type="Texture2D" uid="uid://c7euipo1qunv0" path="res://Levels/Tasks/Take Trash Out/Background.png" id="2_llemg"]
 [ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_yisrm"]
 [ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="4_llemg"]
 [ext_resource type="Script" uid="uid://c34wo6p14kxa4" path="res://Levels/Tasks/Take Trash Out/bins.gd" id="5_mhpnx"]
@@ -28,6 +29,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_llemg")
 
 [node name="Scores" parent="." instance=ExtResource("3_yisrm")]
 time = 30
