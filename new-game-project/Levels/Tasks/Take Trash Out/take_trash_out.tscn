@@ -34,6 +34,7 @@ texture = ExtResource("2_llemg")
 [node name="Scores" parent="." instance=ExtResource("3_yisrm")]
 time = 30
 scoreMultiplier = 2
+room = "uid://bj1ksxf7fwjtb"
 
 [node name="Dialog Player" parent="." instance=ExtResource("4_llemg")]
 scene_text_file = "res://Assets/Dialogues/tasks.json"

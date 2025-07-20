@@ -1,12 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://b0inv6kdanykl"]
 
-[ext_resource type="Script" uid="uid://bcc4uh1kskonr" path="res://Levels/Cut Scene/cut_scene.gd" id="1_m1e0f"]
-[ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="2_an12h"]
-[ext_resource type="Texture2D" uid="uid://clcp4bnsqgqmv" path="res://Assets/Sprites/Room Background/BED_ROOM.png" id="2_m1e0f"]
+[ext_resource type="Script" uid="uid://bcc4uh1kskonr" path="res://Levels/Cut Scene/cut_scene.gd" id="1_t3n30"]
+[ext_resource type="Texture2D" uid="uid://ckd4tqv0exry3" path="res://Levels/Rooms/Bed Room/Background.png" id="2_6khfu"]
+[ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="3_m62qs"]
 
 [node name="StartGame" type="Node2D"]
 process_mode = 3
-script = ExtResource("1_m1e0f")
+script = ExtResource("1_t3n30")
 dialogKey = "start game"
 dialogLine = 4
 nextScene = "uid://bstqgq8pxmtjo"
@@ -21,7 +21,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_m1e0f")
+texture = ExtResource("2_6khfu")
 
-[node name="Dialog Player" parent="." instance=ExtResource("2_an12h")]
+[node name="Dialog Player" parent="." instance=ExtResource("3_m62qs")]
 scene_text_file = "res://Assets/Dialogues/cut_scenes.json"

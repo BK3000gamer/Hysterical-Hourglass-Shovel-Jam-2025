@@ -3,13 +3,16 @@
 [ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_12vgj"]
 [ext_resource type="Texture2D" uid="uid://fvm0mdoppecu" path="res://Levels/Tasks/Indoor Obelisk/Backgroun-01.png" id="2_v4t0n"]
 [ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_svbbo"]
-[ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="4_v4t0n"]
+[ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="4_v4t0n"]
 [ext_resource type="Script" uid="uid://bjw6mj5xjxbo5" path="res://Levels/Tasks/Indoor Obelisk/array.gd" id="5_pta1y"]
 [ext_resource type="Script" uid="uid://me3qcdqexfb1" path="res://Levels/Tasks/Indoor Obelisk/obelisk_symbol.gd" id="7_v4t0n"]
 [ext_resource type="Script" uid="uid://drlufesi7fudr" path="res://Levels/Tasks/Indoor Obelisk/player_symbol.gd" id="8_ntrfe"]
 
 [node name="Indoor Obelisk" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_12vgj")
+dialogKey = "indoor obelisk"
+dialogLine = 2
 metadata/_custom_type_script = "uid://gtgw2e6juj6o"
 
 [node name="Background" type="TextureRect" parent="."]
@@ -27,9 +30,11 @@ texture = ExtResource("2_v4t0n")
 scoreMultiplier = 2
 room = "uid://dgx1imjkfolew"
 
-[node name="Timer UI" parent="." instance=ExtResource("4_v4t0n")]
+[node name="Dialog Player" parent="." instance=ExtResource("4_v4t0n")]
+scene_text_file = "res://Assets/Dialogues/tasks.json"
 
 [node name="Array" type="Node" parent="."]
+process_mode = 1
 script = ExtResource("5_pta1y")
 
 [node name="Symbol 1" type="Sprite2D" parent="."]

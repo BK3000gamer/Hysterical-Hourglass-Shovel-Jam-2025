@@ -10,5 +10,9 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_accept") and dialogLine > 0:
-		SignalBus.emit_signal("display_dialog", dialogKey)
+		SignalBus.emit_signal("display_dialog", dialogKey)  
 		dialogLine -= 1
+	
+	if dialogLine == 0:
+		GlobalTimer.timer.one_shot = false
+		GlobalTimer.timer.start()

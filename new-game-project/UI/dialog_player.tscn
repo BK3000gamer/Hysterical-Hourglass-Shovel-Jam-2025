@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dutdhapt4pg4i" path="res://UI/dialog_player.gd" id="1_8mldl"]
 
-[sub_resource type="SystemFont" id="SystemFont_8mldl"]
+[sub_resource type="SystemFont" id="SystemFont_h2akf"]
 font_names = PackedStringArray("Montserrat")
 subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_8mldl"]
-font = SubResource("SystemFont_8mldl")
+font = SubResource("SystemFont_h2akf")
 font_size = 32
 
 [node name="Dialog Player" type="CanvasLayer"]

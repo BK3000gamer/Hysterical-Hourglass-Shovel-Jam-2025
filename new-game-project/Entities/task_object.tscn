@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bva8xh5n0052b" path="res://icon.svg" id="2_myy5h"]
 
 [node name="Task Object" type="Node2D"]
-process_mode = 3
+process_mode = 1
 script = ExtResource("1_0gnj1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,11 +1,11 @@
 extends Node2D
-class_name Rooms
-
-@export var dialogKey: String = ""
-
-func _ready() -> void:
-	SignalBus.emit_signal("display_dialog", dialogKey)
 
 func _process(delta: float) -> void:
 	if GlobalTimer.time == 0:
-		print("timeout")
+		get_tree().change_scene_to_file("res://Levels/Cut Scene/failed.tscn")
+	
+	if GlobalTimer.totalTime >= 1020:
+		get_tree().change_scene_to_file("res://Levels/Cut Scene/end_game.tscn")
+	
+	if TaskSpawner.Completed and GlobalTimer.totalTime < 1020:
+		get_tree().change_scene_to_file("res://Levels/Cut Scene/failed.tscn")

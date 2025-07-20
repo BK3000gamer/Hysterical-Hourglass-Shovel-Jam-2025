@@ -1,16 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgx1imjkfolew"]
+[gd_scene load_steps=7 format=3 uid="uid://dgx1imjkfolew"]
 
 [ext_resource type="Script" uid="uid://bimlo53aoltyu" path="res://Levels/Rooms/Basement/basement.gd" id="1_tvl1v"]
-[ext_resource type="Texture2D" uid="uid://chmbqsllalv3m" path="res://Assets/Sprites/Room Background/BASEMENT.png" id="2_whp5p"]
+[ext_resource type="Texture2D" uid="uid://437jx2bsnfv" path="res://Levels/Rooms/Basement/Background.png" id="2_hx37a"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="3_3w624"]
+[ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="3_tvl1v"]
+[ext_resource type="PackedScene" uid="uid://d4ma834m181sm" path="res://Entities/interaction_object.tscn" id="4_hx37a"]
 [ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="4_m56nm"]
-[ext_resource type="Texture2D" uid="uid://cg6pdpvt7pkds" path="res://Assets/Sprites/Door Objects/BACKYARD.png" id="5_w4o5f"]
 
 [node name="Basement" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_tvl1v")
-indoorObeliskPos = Vector2(500, 300)
-hollyWaterPos = Vector2(800, 300)
-metadata/_custom_type_script = "uid://dfrts4mmbagjl"
+indoorObeliskPos = Vector2(746, 609)
+hollyWaterPos = Vector2(1001, 497)
 
 [node name="Background" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
@@ -21,15 +22,49 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_whp5p")
+texture = ExtResource("2_hx37a")
 
 [node name="Timer UI" parent="." instance=ExtResource("3_3w624")]
 
+[node name="Dialog Player" parent="." instance=ExtResource("3_tvl1v")]
+scene_text_file = "res://Assets/Dialogues/interactions.json"
+
 [node name="Backyard Door" parent="." instance=ExtResource("4_m56nm")]
-position = Vector2(980, 828)
+position = Vector2(584, 862)
+rotation = 0.510513
 room = "uid://c0noph186iboi"
 
-[node name="Sprite2D" parent="Backyard Door" index="1"]
-texture = ExtResource("5_w4o5f")
+[node name="Button" parent="Backyard Door" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -91.0
+offset_top = -26.0
+offset_right = 104.0
+offset_bottom = 52.0
+
+[node name="Summon Demon" parent="." instance=ExtResource("4_hx37a")]
+position = Vector2(1042, 842)
+dialogKey = "Summon Demons Interaction"
+dialogLine = 8
+
+[node name="Button" parent="Summon Demon" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -113.0
+offset_top = -63.0
+offset_right = 112.0
+offset_bottom = 74.0
+
+[node name="Call Angels" parent="." instance=ExtResource("4_hx37a")]
+position = Vector2(1216, 528)
+dialogKey = "Contact Angels Interaction"
+dialogLine = 6
+
+[node name="Button" parent="Call Angels" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -69.0
+offset_top = -126.0
+offset_right = 95.0
+offset_bottom = 120.0
 
 [editable path="Backyard Door"]
+[editable path="Summon Demon"]
+[editable path="Call Angels"]

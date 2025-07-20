@@ -1,7 +1,9 @@
 {
 	"computer desktop": [
-		"Fist line",
-		"Second line"
+		"How about you clear some of the trash files from your desktop.",
+		"Seems easy, but unfortunately at some point you changed the settings on your mouse somewhere and now you don't know how to fix it.",
+		"Just use the WASD keys instead and navigate the trash file to the bin without depositing it into another folder on accident.",
+		"Oh also, your desktop will randomise each time you succeed or fail. Have fun!"
 	],
 	"clothes": [
 		"While you're doing your laundry you figure you’d better sort your shirts by colour while you're at it.",
@@ -15,5 +17,20 @@
 		"Sorting your rubbish substances can’t be that hard right?",
 		"Just sort the recyclables into the recycle bin, your compost into the compost bin and everything else into the other one.",
 		"What do you even call the other one anyway? Landfill I guess? Oh well just sort your rubbish."
+	],
+	"holy water": [
+		"Oof this is getting kinda low, not great considering what happens if your holy water ever runs out.",
+		"It's not too hard to refill anyway, just keep your hand steady and don't overfill or under fill."
+	],
+	"indoor obelisk": [
+		"You know how it is, gotta repaint the obelisk. It starts to throb with malice if you don’t.",
+		"Just match the symbols, it’s not too hard."
+	],
+	"picture frame": [
+		"This picture is really starting to annoy you. How about you straighten it out before it causes a brain aneurysm."
+	],
+	"lizard": [
+		"You remember you haven't ‘walked’ Rodney yet today, you should probably go and do that or he’ll get grumpy.",
+		"Watch out though he’s very eager and likes to chase things so you’d best hold on."
 	]
 }

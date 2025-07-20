@@ -1,17 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://6hbswx1wbmqk"]
+[gd_scene load_steps=5 format=3 uid="uid://6hbswx1wbmqk"]
 
-[ext_resource type="Script" uid="uid://dfrts4mmbagjl" path="res://Levels/Rooms/room.gd" id="1_0fxqt"]
+[ext_resource type="Script" uid="uid://tta73287ypy6" path="res://Levels/Rooms/room.gd" id="1_0fxqt"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="2_faqrc"]
-[ext_resource type="Texture2D" uid="uid://1nl5v0muwls" path="res://Assets/Sprites/Room Background/2ND_FLOOR.png" id="2_sw1ej"]
+[ext_resource type="Texture2D" uid="uid://dfvp3vs86rir6" path="res://Levels/Rooms/2nd Floor.png" id="2_sw1ej"]
 [ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="3_sw1ej"]
-[ext_resource type="Texture2D" uid="uid://hocvpc3i0k7y" path="res://Assets/Sprites/Door Objects/1ST_FLOOR.png" id="5_nf182"]
-[ext_resource type="Texture2D" uid="uid://cecmgoun5hako" path="res://Assets/Sprites/Door Objects/BED_ROOM.png" id="6_jmkvl"]
-[ext_resource type="Texture2D" uid="uid://vv5wvewic1x" path="res://Assets/Sprites/Door Objects/OFFICE.png" id="7_c1y8e"]
-[ext_resource type="Texture2D" uid="uid://hrtwes3kby35" path="res://Assets/Sprites/Door Objects/ATTIC.png" id="8_uecy0"]
 
 [node name="2nd Floor" type="Node2D"]
 script = ExtResource("1_0fxqt")
-metadata/_custom_type_script = "uid://dfrts4mmbagjl"
 
 [node name="Background" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
@@ -27,34 +22,39 @@ texture = ExtResource("2_sw1ej")
 [node name="Timer UI" parent="." instance=ExtResource("2_faqrc")]
 
 [node name="1st Floor Door" parent="." instance=ExtResource("3_sw1ej")]
-position = Vector2(1081, 782)
+position = Vector2(760, 820)
+rotation = 0.524566
 room = "uid://dafpxex175r24"
 
-[node name="Sprite2D" parent="1st Floor Door" index="1"]
-texture = ExtResource("5_nf182")
+[node name="Button" parent="1st Floor Door" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -85.0
+offset_top = -33.0
+offset_right = 107.0
+offset_bottom = 45.0
 
 [node name="Bed Room Door" parent="." instance=ExtResource("3_sw1ej")]
-position = Vector2(664, 784)
+position = Vector2(960, 440)
 room = "uid://bstqgq8pxmtjo"
 
-[node name="Sprite2D" parent="Bed Room Door" index="1"]
-texture = ExtResource("6_jmkvl")
+[node name="Button" parent="Bed Room Door" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -54.0
+offset_top = -166.0
+offset_right = 59.0
+offset_bottom = 149.0
 
 [node name="Office Door" parent="." instance=ExtResource("3_sw1ej")]
-position = Vector2(1588, 781)
+position = Vector2(1280, 623)
 room = "uid://cbuwpm0vjltfd"
 
-[node name="Sprite2D" parent="Office Door" index="1"]
-texture = ExtResource("7_c1y8e")
-
-[node name="Attic Door" parent="." instance=ExtResource("3_sw1ej")]
-position = Vector2(279, 782)
-room = "uid://du2qc05q0fqbs"
-
-[node name="Sprite2D" parent="Attic Door" index="1"]
-texture = ExtResource("8_uecy0")
+[node name="Button" parent="Office Door" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -57.0
+offset_top = -172.0
+offset_right = 57.0
+offset_bottom = 154.0
 
 [editable path="1st Floor Door"]
 [editable path="Bed Room Door"]
 [editable path="Office Door"]
-[editable path="Attic Door"]

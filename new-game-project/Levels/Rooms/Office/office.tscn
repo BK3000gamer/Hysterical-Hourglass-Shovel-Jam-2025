@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbuwpm0vjltfd"]
+[gd_scene load_steps=7 format=3 uid="uid://cbuwpm0vjltfd"]
 
 [ext_resource type="Script" uid="uid://ouxts6js32vw" path="res://Levels/Rooms/Office/office.gd" id="1_qkiey"]
 [ext_resource type="Texture2D" uid="uid://dyg5q1grkebte" path="res://Levels/Rooms/Office/Background.png" id="2_fabdn"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="3_uckc1"]
 [ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="4_m8lvv"]
+[ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="4_qkiey"]
+[ext_resource type="PackedScene" uid="uid://d4ma834m181sm" path="res://Entities/interaction_object.tscn" id="6_sr100"]
 
 [node name="Office" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_qkiey")
-desktopPos = Vector2(900, 300)
-metadata/_custom_type_script = "uid://dfrts4mmbagjl"
+desktopPos = Vector2(742, 403)
+desktopRot = 28.7
 
 [node name="Background" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
@@ -23,8 +26,45 @@ texture = ExtResource("2_fabdn")
 
 [node name="Timer UI" parent="." instance=ExtResource("3_uckc1")]
 
+[node name="Dialog Player" parent="." instance=ExtResource("4_qkiey")]
+scene_text_file = "res://Assets/Dialogues/interactions.json"
+
 [node name="2nd Floor Door" parent="." instance=ExtResource("4_m8lvv")]
-position = Vector2(997, 786)
+position = Vector2(609, 889)
+rotation = 0.500387
 room = "uid://6hbswx1wbmqk"
 
+[node name="Button" parent="2nd Floor Door" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -93.0
+offset_top = -34.0
+offset_right = 100.0
+offset_bottom = 45.0
+
+[node name="Alien" parent="." instance=ExtResource("6_sr100")]
+position = Vector2(1137, 425)
+dialogKey = "Contact Aliens Interaction"
+dialogLine = 9
+
+[node name="Button" parent="Alien" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_top = -60.0
+offset_right = 26.0
+offset_bottom = 61.0
+
+[node name="Spam Call" parent="." instance=ExtResource("6_sr100")]
+position = Vector2(1245, 532)
+rotation = 0.912725
+dialogKey = "Answer Spam Call Interaction"
+dialogLine = 9
+
+[node name="Button" parent="Spam Call" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -40.0
+offset_top = -46.0
+offset_right = 19.0
+offset_bottom = 41.0
+
 [editable path="2nd Floor Door"]
+[editable path="Alien"]
+[editable path="Spam Call"]

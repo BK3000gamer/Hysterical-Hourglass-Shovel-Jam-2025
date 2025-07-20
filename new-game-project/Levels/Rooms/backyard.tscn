@@ -1,13 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0noph186iboi"]
+[gd_scene load_steps=7 format=3 uid="uid://c0noph186iboi"]
 
-[ext_resource type="Script" uid="uid://dfrts4mmbagjl" path="res://Levels/Rooms/room.gd" id="1_isixs"]
-[ext_resource type="Texture2D" uid="uid://dh7afjifpmea2" path="res://Assets/Sprites/Room Background/BACKYARD.png" id="2_opbri"]
+[ext_resource type="Script" uid="uid://tta73287ypy6" path="res://Levels/Rooms/room.gd" id="1_isixs"]
+[ext_resource type="Texture2D" uid="uid://cpb8cw8c3ujkj" path="res://Levels/Rooms/Backyard.png" id="2_opbri"]
 [ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="2_voe63"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="3_opbri"]
+[ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="5_l7bv8"]
+[ext_resource type="PackedScene" uid="uid://d4ma834m181sm" path="res://Entities/interaction_object.tscn" id="5_nkcxy"]
 
 [node name="Backyard" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_isixs")
-metadata/_custom_type_script = "uid://dfrts4mmbagjl"
 
 [node name="Background" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
@@ -22,18 +24,82 @@ texture = ExtResource("2_opbri")
 
 [node name="Timer UI" parent="." instance=ExtResource("3_opbri")]
 
-[node name="Living Room Door" parent="." instance=ExtResource("2_voe63")]
-position = Vector2(1484, 751)
-room = "uid://d2pfqdgmod8yk"
-
-[node name="Kitchen Door" parent="." instance=ExtResource("2_voe63")]
-position = Vector2(384, 765)
-room = "uid://dghm0atvqrg70"
+[node name="Dialog Player" parent="." instance=ExtResource("5_l7bv8")]
+scene_text_file = "res://Assets/Dialogues/interactions.json"
 
 [node name="Basement Door" parent="." instance=ExtResource("2_voe63")]
-position = Vector2(981, 751)
+position = Vector2(657, 921)
+rotation = 0.536702
 room = "uid://dgx1imjkfolew"
 
-[editable path="Living Room Door"]
-[editable path="Kitchen Door"]
+[node name="Button" parent="Basement Door" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -89.0
+offset_top = -39.0
+offset_right = 111.0
+offset_bottom = 39.0
+
+[node name="1st Floor Door" parent="." instance=ExtResource("2_voe63")]
+position = Vector2(1338, 871)
+rotation = -0.512588
+room = "uid://dafpxex175r24"
+
+[node name="Button" parent="1st Floor Door" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -101.0
+offset_top = -31.0
+offset_right = 94.0
+offset_bottom = 47.0
+
+[node name="Stair Golem" parent="." instance=ExtResource("5_nkcxy")]
+position = Vector2(596, 775)
+dialogKey = "Pay the Stair Golem Interaction"
+dialogLine = 2
+
+[node name="Button" parent="Stair Golem" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_top = -91.0
+offset_right = 40.0
+offset_bottom = 87.0
+
+[node name="Water Plants" parent="." instance=ExtResource("5_nkcxy")]
+position = Vector2(533, 604)
+dialogKey = "Water Plants Interaction"
+dialogLine = 5
+
+[node name="Button" parent="Water Plants" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_top = -63.0
+offset_right = 81.0
+offset_bottom = 77.0
+
+[node name="Monster Plants" parent="." instance=ExtResource("5_nkcxy")]
+position = Vector2(1150, 464)
+dialogKey = "Feed Monster Plant Interaction"
+dialogLine = 2
+
+[node name="Button" parent="Monster Plants" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -23.0
+offset_top = -65.0
+offset_right = 17.0
+offset_bottom = 71.0
+
+[node name="Mushroom" parent="." instance=ExtResource("5_nkcxy")]
+position = Vector2(967, 741)
+dialogKey = "Harvest Sentient Mushrooms"
+dialogLine = 4
+
+[node name="Button" parent="Mushroom" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -84.0
+offset_top = -64.0
+offset_right = 62.0
+offset_bottom = 56.0
+
 [editable path="Basement Door"]
+[editable path="1st Floor Door"]
+[editable path="Stair Golem"]
+[editable path="Water Plants"]
+[editable path="Monster Plants"]
+[editable path="Mushroom"]

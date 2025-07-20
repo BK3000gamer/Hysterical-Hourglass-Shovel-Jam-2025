@@ -1,15 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dghm0atvqrg70"]
+[gd_scene load_steps=7 format=3 uid="uid://dghm0atvqrg70"]
 
 [ext_resource type="Script" uid="uid://co2sfuo8wf1qk" path="res://Levels/Rooms/Kitchen/kitchen.gd" id="1_37a3f"]
 [ext_resource type="Texture2D" uid="uid://bua30dhy2va8u" path="res://Levels/Rooms/Kitchen/Background.png" id="2_yoad8"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="3_x45f6"]
+[ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="3_yoad8"]
 [ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="4_t61kw"]
+[ext_resource type="PackedScene" uid="uid://d4ma834m181sm" path="res://Entities/interaction_object.tscn" id="5_a6dxf"]
 
 [node name="Kitchen" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_37a3f")
 dishesPos = Vector2(845, 389)
 dishesRot = -31.8
-metadata/_custom_type_script = "uid://dfrts4mmbagjl"
 
 [node name="Background" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
@@ -24,6 +26,9 @@ texture = ExtResource("2_yoad8")
 
 [node name="Timer UI" parent="." instance=ExtResource("3_x45f6")]
 
+[node name="Dialog Player" parent="." instance=ExtResource("3_yoad8")]
+scene_text_file = "res://Assets/Dialogues/interactions.json"
+
 [node name="1st Floor Door" parent="." instance=ExtResource("4_t61kw")]
 position = Vector2(614, 893)
 rotation = 0.557073
@@ -36,4 +41,31 @@ offset_top = -36.0
 offset_right = 91.0
 offset_bottom = 41.0
 
+[node name="Breakfast" parent="." instance=ExtResource("5_a6dxf")]
+position = Vector2(1096, 391)
+rotation = 0.54737
+dialogKey = "Breakfast Interaction"
+dialogLine = 2
+
+[node name="Button" parent="Breakfast" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -42.0
+offset_top = -30.0
+offset_right = 46.0
+offset_bottom = 37.0
+
+[node name="Coffe" parent="." instance=ExtResource("5_a6dxf")]
+position = Vector2(1193, 463)
+dialogKey = "Coffee Interaction"
+dialogLine = 3
+
+[node name="Button" parent="Coffe" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -11.0
+offset_top = -19.0
+offset_right = 16.0
+offset_bottom = 10.0
+
 [editable path="1st Floor Door"]
+[editable path="Breakfast"]
+[editable path="Coffe"]

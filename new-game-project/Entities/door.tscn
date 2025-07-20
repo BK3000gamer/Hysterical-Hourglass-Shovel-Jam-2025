@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bfq4y1eduyxli" path="res://Entities/door.gd" id="1_eoj8k"]
 
 [node name="Door" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_eoj8k")
 
 [node name="Button" type="Button" parent="."]

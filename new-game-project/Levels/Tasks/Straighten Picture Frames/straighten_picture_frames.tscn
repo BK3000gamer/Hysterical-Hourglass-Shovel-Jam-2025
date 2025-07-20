@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://vhvi6qb82qrv"]
+[gd_scene load_steps=12 format=3 uid="uid://vhvi6qb82qrv"]
 
 [ext_resource type="Script" uid="uid://gtgw2e6juj6o" path="res://Levels/Tasks/task.gd" id="1_6hlkn"]
+[ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="3_0538w"]
 [ext_resource type="PackedScene" uid="uid://c8lw7cpbrv5r3" path="res://UI/scores.tscn" id="3_xynur"]
 [ext_resource type="Script" uid="uid://c2qekpaocs2cj" path="res://Levels/Tasks/Straighten Picture Frames/picture.gd" id="5_yxabr"]
 [ext_resource type="Texture2D" uid="uid://cm4idyfnrimaq" path="res://Levels/Tasks/Straighten Picture Frames/Picture 1.png" id="6_xynur"]
@@ -16,7 +17,10 @@ colors = PackedColorArray(0.728822, 0.728822, 0.728822, 1, 0.729412, 0.729412, 0
 gradient = SubResource("Gradient_0538w")
 
 [node name="Straighten Picture Frames" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_6hlkn")
+dialogKey = "picture frame"
+dialogLine = 1
 metadata/_custom_type_script = "uid://gtgw2e6juj6o"
 
 [node name="Background" type="TextureRect" parent="."]
@@ -39,39 +43,51 @@ timedScore = true
 timedScoreMultiplier = 1
 room = "uid://d2pfqdgmod8yk"
 
+[node name="Dialog Player" parent="." instance=ExtResource("3_0538w")]
+scene_text_file = "res://Assets/Dialogues/tasks.json"
+
 [node name="Picture" type="Node2D" parent="."]
+process_mode = 1
 position = Vector2(952, 570)
 script = ExtResource("5_yxabr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Picture"]
+process_mode = 1
 texture_filter = 1
 texture = ExtResource("6_xynur")
 
 [node name="Picture2" type="Node2D" parent="."]
+process_mode = 1
 position = Vector2(464, 250)
 script = ExtResource("5_yxabr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Picture2"]
+process_mode = 1
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("7_i2qb5")
 
 [node name="Picture3" type="Node2D" parent="."]
+process_mode = 1
 position = Vector2(1546, 250)
 script = ExtResource("5_yxabr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Picture3"]
+process_mode = 1
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("8_1flsw")
 
 [node name="Picture4" type="Node2D" parent="."]
+process_mode = 1
 position = Vector2(1447, 709)
 script = ExtResource("5_yxabr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Picture4"]
+process_mode = 1
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("9_0538w")
 
 [node name="Picture5" type="Node2D" parent="."]
+process_mode = 1
 position = Vector2(424, 775)
 script = ExtResource("5_yxabr")
 

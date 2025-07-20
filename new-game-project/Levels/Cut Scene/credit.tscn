@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs7m144yng83t"]
+
+[sub_resource type="Gradient" id="Gradient_chgim"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_72q0i"]
+gradient = SubResource("Gradient_chgim")
+
+[sub_resource type="SystemFont" id="SystemFont_8mldl"]
+font_names = PackedStringArray("Montserrat")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_4jf48"]
+font = SubResource("SystemFont_8mldl")
+font_size = 32
+
+[node name="Credit" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_72q0i")
+
+[node name="Text Label" type="Label" parent="."]
+custom_minimum_size = Vector2(1150, 250)
+anchors_preset = -1
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 1924.0
+offset_bottom = 1086.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(864, 0)
+text = "Programmed by
+Khoi Hoang
+
+Story by
+Robin Voss
+
+Art by
+Khoi Hoang
+Robin Voss"
+label_settings = SubResource("LabelSettings_4jf48")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

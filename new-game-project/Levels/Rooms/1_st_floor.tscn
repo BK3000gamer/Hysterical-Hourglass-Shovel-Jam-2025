@@ -1,13 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://dafpxex175r24"]
 
-[ext_resource type="Script" uid="uid://dfrts4mmbagjl" path="res://Levels/Rooms/room.gd" id="1_jagaf"]
+[ext_resource type="Script" uid="uid://tta73287ypy6" path="res://Levels/Rooms/room.gd" id="1_jagaf"]
 [ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="2_6le83"]
-[ext_resource type="Texture2D" uid="uid://cm2unc3una405" path="res://Assets/Sprites/Room Background/1ST_FLOOR.png" id="2_ol71u"]
+[ext_resource type="Texture2D" uid="uid://ve7xugx0eskt" path="res://Levels/Rooms/1st Floor.png" id="2_wxgsl"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="3_wxgsl"]
 
 [node name="1st Floor" type="Node2D"]
 script = ExtResource("1_jagaf")
-metadata/_custom_type_script = "uid://dfrts4mmbagjl"
 
 [node name="Background" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
@@ -18,33 +17,69 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_ol71u")
+texture = ExtResource("2_wxgsl")
 
 [node name="Timer UI" parent="." instance=ExtResource("3_wxgsl")]
 
 [node name="Living Room Door" parent="." instance=ExtResource("2_6le83")]
-position = Vector2(931, 776)
+position = Vector2(639, 634)
 room = "uid://d2pfqdgmod8yk"
 
 [node name="Button" parent="Living Room Door" index="0"]
-metadata/_edit_use_anchors_ = true
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -53.0
+offset_top = -181.0
+offset_right = 57.0
+offset_bottom = 140.0
+
+[node name="Kitchen Door" parent="." instance=ExtResource("2_6le83")]
+position = Vector2(962, 441)
+room = "uid://dghm0atvqrg70"
+
+[node name="Button" parent="Kitchen Door" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -57.0
+offset_top = -166.0
+offset_right = 53.0
+offset_bottom = 145.0
 
 [node name="Frontyard Door" parent="." instance=ExtResource("2_6le83")]
-position = Vector2(1511, 782)
+position = Vector2(493, 990)
+rotation = 0.501659
 room = "uid://bj1ksxf7fwjtb"
 
+[node name="Button" parent="Frontyard Door" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -89.0
+offset_top = -45.0
+offset_right = 102.0
+offset_bottom = 32.0
+
 [node name="2nd Floor Door" parent="." instance=ExtResource("2_6le83")]
-position = Vector2(317, 786)
+position = Vector2(1157, 814)
+rotation = -0.5371
 room = "uid://6hbswx1wbmqk"
 
+[node name="Button" parent="2nd Floor Door" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -112.0
+offset_top = -28.0
+offset_right = 86.0
+offset_bottom = 56.0
+
 [node name="Backyard Door" parent="." instance=ExtResource("2_6le83")]
-position = Vector2(1736, 779)
+position = Vector2(1385, 376)
 room = "uid://c0noph186iboi"
 
 [node name="Button" parent="Backyard Door" index="0"]
-metadata/_edit_use_anchors_ = true
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -54.0
+offset_top = -163.0
+offset_right = 57.0
+offset_bottom = 153.0
 
 [editable path="Living Room Door"]
+[editable path="Kitchen Door"]
 [editable path="Frontyard Door"]
 [editable path="2nd Floor Door"]
 [editable path="Backyard Door"]

@@ -1,7 +1,7 @@
 extends Node
 
-@onready var totalTime: int = 480
-@onready var time: int = 120
+@onready var totalTime: int = 540
+@onready var time: int = 60
 
 var h = 0
 var m = 0
@@ -25,3 +25,4 @@ func _process(delta: float) -> void:
 	m = totalTime - h * 60
 	cm = int(time / 60)
 	cs = time - cm * 60
+	

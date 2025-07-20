@@ -7,4 +7,5 @@
 task = "uid://d1h62h6mt525j"
 
 [node name="Sprite2D" parent="." index="0"]
+visible = false
 texture = ExtResource("2_dgk76")

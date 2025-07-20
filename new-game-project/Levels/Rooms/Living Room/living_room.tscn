@@ -1,15 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2pfqdgmod8yk"]
+[gd_scene load_steps=7 format=3 uid="uid://d2pfqdgmod8yk"]
 
 [ext_resource type="Script" uid="uid://dfp6uu1ebi7ah" path="res://Levels/Rooms/Living Room/living_room.gd" id="1_4e524"]
 [ext_resource type="Texture2D" uid="uid://bxw2ohqjkdua0" path="res://Levels/Rooms/Living Room/Background.png" id="2_48lmh"]
 [ext_resource type="PackedScene" uid="uid://cm10bkdq5b4in" path="res://UI/timer_ui.tscn" id="3_kcw34"]
 [ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="4_ahcwk"]
+[ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="4_h8jyr"]
+[ext_resource type="PackedScene" uid="uid://d4ma834m181sm" path="res://Entities/interaction_object.tscn" id="6_og8yy"]
 
 [node name="Living Room" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_4e524")
 pictureFramePos = Vector2(1243, 359)
 pictureFrameRot = 34.3
-metadata/_custom_type_script = "uid://dfrts4mmbagjl"
 
 [node name="Background" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
@@ -24,6 +26,9 @@ texture = ExtResource("2_48lmh")
 
 [node name="Timer UI" parent="." instance=ExtResource("3_kcw34")]
 
+[node name="Dialog Player" parent="." instance=ExtResource("4_h8jyr")]
+scene_text_file = "res://Assets/Dialogues/interactions.json"
+
 [node name="1st Floor Door" parent="." instance=ExtResource("4_ahcwk")]
 position = Vector2(1413, 539)
 room = "uid://dafpxex175r24"
@@ -35,4 +40,31 @@ offset_top = -153.0
 offset_right = 55.0
 offset_bottom = 156.0
 
+[node name="TV" parent="." instance=ExtResource("6_og8yy")]
+position = Vector2(1101, 711)
+rotation = -0.433963
+dialogKey = "Binge TV Show Interaction"
+dialogLine = 7
+
+[node name="Button" parent="TV" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -150.0
+offset_top = -63.0
+offset_right = 115.0
+offset_bottom = 66.0
+
+[node name="Card" parent="." instance=ExtResource("6_og8yy")]
+position = Vector2(852, 694)
+dialogKey = "Open Trading Card Packs Interaction"
+dialogLine = 6
+
+[node name="Button" parent="Card" index="0"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -19.0
+offset_top = -18.0
+offset_right = 21.0
+offset_bottom = 16.0
+
 [editable path="1st Floor Door"]
+[editable path="TV"]
+[editable path="Card"]

@@ -26,7 +26,7 @@ size = Vector2(48, 48)
 process_mode = 3
 script = ExtResource("1_kcmr3")
 dialogKey = "computer desktop"
-dialogLine = 2
+dialogLine = 4
 metadata/_custom_type_script = "uid://gtgw2e6juj6o"
 
 [node name="Background" type="TextureRect" parent="."]

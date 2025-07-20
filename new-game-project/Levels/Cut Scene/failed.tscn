@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw4pxwm7x2r4e"]
+
+[ext_resource type="Script" uid="uid://bcc4uh1kskonr" path="res://Levels/Cut Scene/cut_scene.gd" id="1_j5qgf"]
+[ext_resource type="Texture2D" uid="uid://dyg5q1grkebte" path="res://Levels/Rooms/Office/Background.png" id="2_v1bg8"]
+[ext_resource type="PackedScene" uid="uid://db6kod2ebfgs" path="res://UI/dialog_player.tscn" id="3_pefdv"]
+
+[node name="Failed" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_j5qgf")
+dialogKey = "failed"
+dialogLine = 3
+nextScene = "uid://cs7m144yng83t"
+metadata/_custom_type_script = "uid://bcc4uh1kskonr"
+
+[node name="Background" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_v1bg8")
+
+[node name="Dialog Player" parent="." instance=ExtResource("3_pefdv")]
+scene_text_file = "res://Assets/Dialogues/cut_scenes.json"
