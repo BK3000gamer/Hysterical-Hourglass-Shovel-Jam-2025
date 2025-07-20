@@ -1,0 +1,142 @@
+{
+	"Start Game": [
+		"You have been awoken by the vile sound of your digital alarm. As the fog of sleep clears, you find that your dismay at the prospect of being awake only deepens as you remember the responsibilities that await you in the day.",
+		"You have been putting off a so-called “loving your work” course that you are required to do by your employer for weeks now but the deadline is looming and it's getting harder to avoid doing it.",
+		"You decide to see how much you can get done around the house before the course becomes just too hard to ignore."
+	],
+	"Failed": [
+		"How long are you gonna keep putting this off? Literally just go and do the damn course. Yes I know it's not interesting but you gotta do it.",
+		"Incidentally, have you ever been checked for ADHD?",
+	],
+	"Clothes Minigame": [
+		"While you're doing your laundry you figure you’d better sort your shirts by colour while you're at it. Just toss ‘em in the corresponding box."
+	],
+	"Dishes Minigame": [
+		"You haven't the slightest clue what you ate off of this plate or why it looks like this but it definitely needs a scrub. If you put it in the dishwasher the way it is, the machine would probably call you a slur.",
+	],
+	"Coffee Interaction": [
+		"Ahh coffee, the elixir of life.",
+		"Some people like to tell you that caffeine is bad for you and that you shouldn't drink so much of it.",
+		"Some people’s opinions are wrong."
+	],
+	"Breakfast Interaction": [
+		"Breakfast? The hell do you think you are!? A functioning adult!? No.",
+		"Go drink your coffee and thug it out till lunch like everyone else. The best you're getting for now is a longing gaze at the left overs in the fridge."
+	],
+	"Check Mail Interaction": [
+		"The mail box is just filled with an assortment of junk mail, despite clearly having a sign that says ‘no junk mail’. ",
+		"Well at least you now know which cults are looking for new members in your area, and how much you can save on your insurance if you switch to NobodyCares Corp or the WhoKnows Group."
+	],
+	"Rubbish Minigame": [
+		"Sorting your rubbish substances can’t be that hard right? Just sort the recyclables into the recycle bin, your compost into the compost bin and everything else into the other one. What do you even call the other one anyway? Landfill I guess?",
+		"Oh well, just sort your rubbish."
+	],
+	"Water Plants Interaction": [
+		"It’s been quite a while since you last watered these. Despite the description that this particular species is easy to look after, they still seem to require consistent attention.",
+		"Perhaps the subtle art of indoor botany isn't for you? Or perhaps the relentless misery machine of modern life has left you an empty husk of your former self, barely able to care for your own needs, little own the requirements of another living organism.",
+		"Maybe the wilted remains of your once vibrant plants now stand as a reflection to the wilted state of your own mortal soul. The cold and detached social environment in which you exist leading to the inexorable decay of your very sense of self just as the lack of care in your plants has led to their decay as well.",
+		"Or maybe you just forgot to water your plants. Might be a good idea to set a reminder on your phone or something."
+	],
+	"Binge TV Show Interaction": [
+		"You sit down on the couch and open NotFlicks to have a look at what's out at the moment. Scrolling through the catalogue you find a mixture of shows and movies you’ve either seen before or that you have no interest in watching.",
+		"That show you really liked and that was widely praised across most of the internet? Yeah it was canceled. On the plus side, that show that everyone universally thinks is shit got renewed for its 18th season. Cool.",
+		"Oh and look at that! They’ve even got the poorly received sequel to an amazing movie but not the original! Awesome.",
+		"Hey they even have a live action remake of a much beloved animated children’s film that cost 3 times the original’s budget to make. Great.",
+		"After a very productive session of scrolling through the content catalogue, in which you failed to find anything to watch but added 3 things to your watch later list, you decide that you have better things to be doing."
+	],
+	"Organise PC Desktop Minigame": [
+		"How about you clear some of the trash files from your desktop. Seems easy, but unfortunately at some point you changed the settings on your mouse somewhere and now you don't know how to fix it.",
+		"Just use the WASD keys instead and navigate the trash file to the bin without depositing it into another folder on accident.",
+		"Oh also, your desktop will randomise each time you succeed or fail. Have fun!"
+	],
+	"Checking Emails Interaction": [
+		"Checking your emails, you find nothing particularly out of the ordinary. Just the usual mixture of random ads, scams and other spam that, despite its name, have not been automatically moved to the spam folder.",
+		"Mixed in amongst the waste is the occasional work mail, government agency bullshit, banking related nonsense, and other assorted literary noise that you could swear cannot be entirely necessary.",
+		"One email is asking whoever keeps bringing the durian into the office to stop. 
+Another requests all employees attend the mandatory new employee hazing party, it reminds you that the horse costume, 4 kilos of cheese, and the three and a half bananas are in fact necessary.
+",
+		"Jerome is saying that his Galapagos tortoise is sick and he can't come in for the next few days because he is looking after it.",
+		"Annisa’s also not gonna be around on Thursday because she has a dentist appointment apparently (you find this very hard to believe)."
+	],
+	"Dating App Interaction": [
+		"By now you are already well aware that dating apps are definitely not great for your self worth and general mental health. Unfortunately being this painfully single isn't either so you get to swiping anyway. The profiles you come across are, as usual, either way out of your league, the exact kind of person you hate, an obvious catfish, or just downright incomprehensible.",
+		"The first one displays an unreasonably muscular bald man with a thick beard, wearing nothing but an uncomfortably thin pair of tighty whities and a generous lathering of oil. The bio states that he has a degree with honours in gender studies.",
+		"The next one is a woman with the most intricate goth makeup you've ever seen holding a hello kitty pillow and a ziplock bag containing white powder. She is almost certainly standing in a concrete basement and there are definitely body bags behind her. The bio says she is a hopeless romantic.",
+		"Another has a bio that says the following; ‘Trad christian ultra masculine alpha’ followed by a dozen or so cross emojis and howling wolves. The image is of quite possibly the most effeminate man you have ever seen wearing pink thigh highs and a maid outfit.",
+		"This one is a picture of the most normal individual you have seen so far. They are wearing a plain t-shirt and hoody along with some black jeans. From what you can tell they are standing in a rather average twenty-something year old’s bedroom and appear to be unaware of the camera.",
+		"Now all of this would be fine if the photo didn't radiate a vibe that can only be described as ‘big-foot footage. The bio is written like a scientific document and states that the subject’s pronouns are they/them. Apparently this is not because they are non binary but rather because the consciousnesses of 18 separate people are trapped within their body. "
+	],
+	"Power Nap Interaction": [
+		"A power nap is probably a good idea, you must be very tired after all the work you have avoided doing all day."
+	],
+	"Answer Spam Call Interaction": [
+		"Your phone rings and, picking it up, you see that the number isn't one you recognise. The chances that this is a spam call are high but hey maybe it’ll be something useful this time. You decide to answer just in case.",
+		"A feminine voice with a thick accent calmly informs you from the other side of the line that your life is forfeit if you do not pay $83,000 in leprechaun gold to the gnome mafia (dont ask) within the next 24 hours.",
+		"You ask the person on the other side what your address is and how they plan to kill you. She quite audibly asks someone else in the room with her for advice on the matter and a back and forth begins between the two parties, with you only able to hear the individual with whom you are on the phone.",
+		"It quickly becomes clear that she is in fact quite inexperienced in her job and has no idea what to do when a victim of the obvious scam doesn't immediately capitulate. The conversation seems to get more heated and the person on the other side of the call is quite audibly holding back tears after what you can only assume was some form of verbal assault directed at her inability to correctly scam someone.",
+		"She says something along the lines of ‘I’m trying my best but you never trained me for this’ through a deluge of sobs before presumably realising she is still on call with you and hanging up.",
+		"Damn, that’s pretty rough. Seems like a toxic work environment."
+	],
+	"Open Trading Card Packs Interaction": [
+		"There are a couple of Capsule Critter trading card packs you forgot to open so you figure you may as well rip ‘em now.",
+		"The first pack contains an Amongoose which looks like a small red space man with no arms, a Pee-Car-Choo which is some kind of yellow rat, and the last one is… Oh… You're pretty sure that's just a slur. You have no idea how they got away with naming it this. The picture just looks like a rather horrendous stereo type as well.",
+		"The second pack contains a card called Glock 19 which claims to instantly kill any card in the game. Something called a Gnomechipper which appears to just be a grainy Live Leak style photo of a wood chipper, and a card named The Jar which has a picture of a large glass jar positioned on the floor framed by the bare shins of a man who appears to be standing over it. Apparently it does psychic damage."
+	],
+	"Straighten Picture Frames Minigame": [
+		"This picture is really starting to annoy you. How about you straighten it out before it causes a brain aneurysm."
+	],
+	"Contact Aliens Interaction": [
+		"This device just showed up in your mail one day. You haven't the slightest clue what it is, but it has an interface which allows you to type things out and send them somewhere.",
+		"You were using it to store random texts and ideas that you planned on using elsewhere but a couple of days ago it started ‘replying’ to you. The messages it sent back were not in any language that you understand but have slowly gotten closer to English each time you messaged since they first showed up.",
+		"This is kind of embarrassing seeing as prior to this occurrence you were using the device as a sort of thought diary but oh well. It’s also probably not great that a substantial quantity of your entries were rather vulgar and/or uncouth but if whoever is on the other side didn't want to see that they shouldn't have contacted you.",
+		"The most recent message you received from the unknown party was as follows; ‘The planet state of earth has been declared sovereign territory of the Arachnum Intergalactic Empire as a result of offensive comments made by the elected diplomat. Occupation will be established after the passing of 10 standard chronal cycles.’",
+		"You’ve no clue what any of that means but in previous messages whoever is sending them seems to have referred to you as ‘earth’s elected diplomat’. Whatever the case you’re getting kinda sick of whatever this is so you just respond with the intellectual masterwork of ‘flip off, butthead’."
+	],
+	"Walk Legless Lizard Minigame": [
+		"You remember you haven't ‘walked’ Rodney yet today, you should probably go and do that or he’ll get grumpy. Watch out though he’s very eager and likes to chase things so you’d best hold on."
+	],
+	"Summon Demons Interaction": [
+		"A notification from your banking app reminds you you’ve forgotten to unsubscribe from the Pear TV streaming service, a task that has become a substantial pain in the ass since they started outsourcing their call centres to hell.",
+		"Oh well, that $20 a month could be used elsewhere since you really don't use the service so you may as well cancel it now.",
+		"After painting a pentagram with goat's blood on the floor and lighting a sulphur candle at each of its points you chant the ritual words outlined on the customer service bit of the company website.",
+		"An unearthly howl echoes through the depths of your mind and your eyes roll back into your head as a pillar of roaring crimson flame erupts from the pentagram.",
+		"Visions of desolation and agony flash through your mind and a nightmarish chorus of thundering voices belt forth a sickening chant in a forgotten tongue, endlessly rising in volume until you feel as though the very earth will shatter from the reverberating cacophony.",
+		"You awake suddenly with the vague sense that you just experienced untold eons and witnessed impossible truths in a dream you can't quite remember, your mortal soul now cursed to the fiery abyss upon death, but your watch tells you that only a minute has passed so it’s probably fine.",
+		"The pentagram is gone and there is now a burnt spot on the floor in its place with a small note stating that your subscription was successfully terminated.",
+		"That wasn't so bad."
+	],
+	"Refill Holy Water Minigame": [
+		"Oof this is getting kinda low, not great considering what happens if your holy water ever runs out. It's not too hard to refill anyway, just keep your hand steady and don't overfill or under fill."
+	],
+	"Reapply Salt to Doors Interaction": [
+		"Huh the salt line at the door has gotten a little scuffed. You really dont wanna be caught with a scuffed salt line after dark so maybe reapply that. You remember what happened to Danise don’t you…",
+		"The Teeth Men like to enter houses without proper salt lines.",
+		"And the Teeth Men don't like you very much."
+	],
+	"Repaint Obelisk Minigame": [
+		"You know how it is, gotta repaint the obelisk. It starts to throb with malice if you don’t. Just match the symbols, it’s not too hard."
+	],
+	"Contact Angels Interaction": [
+		"It occurs to you, you still haven't reserved a table at the italian restaurant your parents like for your catch up with them next saturday. Probably best you do that now huh.",
+		"It’s just kind of annoying that they decided to do the whole contacting the divine thing whenever you want to reserve a table.",
+		"You get it that the theme of the restaurant is the actual biblical heaven and all that, and yeah the food is pretty good, but like witnessing the infinite glory of the divine is kinda inconvenient at times.",
+		"After a short prayer session that involves a not inconsequential amount of blinding radiance, searing golden light, and transcendental choirs made up of the souls of saints, you have a booking for 7PM next saturday.",
+		"You also have somewhat fractured sanity but that part isn't really all that new. Turns out the horrors of a monotonous 9 to 5 combined with access to the sum-total of human knowledge in your pocket at all times will do similar things to the human psyche as contacting the eternal afterlife. Who knew."
+	],
+	"Pay the Stair Golem Interaction": [
+		"Don't forget to pay the stair golem. He makes sure you have stairs, and if he doesn't then the stair goblins will take them.",
+		"Kinda annoying that you have to pay him with fragments of your most treasured memories."
+	],
+	"Feed Monster Plant Interaction": [
+		"Good to know that this thing survived. I guess it’s easier to look after a plant when it tries to eat you if you don’t look after it properly. Speaking of which, it’s time to give it its daily freezer rat."
+	],
+	"Harvest Sentient Mushrooms": [
+		"It’s really inconvenient that these things make such a fuss when it’s time to harvest them. Too bad for them that they taste as good as they do. Don't eat them uncooked though. Not a pleasant trip.",
+		"Apparently living out 1000 lifetimes at once isn't actually very fun. Especially since all of those lifetimes seem to take place during all of the worst atrocities in history."
+	],
+	"End Game": [
+		"Wow, would you look at that! you ‘ve successfully managed to go an entire day without doing a single bit of the work you're actually supposed to be doing. That’s actually pretty impressive. Your boss probably wont think so but hey what do they know.",
+		"Your reward for all your hard work avoiding doing hard work, is a night of anxiety directed at your workload tomorrow.",
+		"Good luck!"
+	],
+}
