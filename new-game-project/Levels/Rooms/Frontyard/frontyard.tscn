@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://di2d02gnsw83d" path="res://Entities/door.tscn" id="4_mnvl0"]
 
 [node name="Frontyard" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_ij3n3")
 walkLizardPos = Vector2(788, 796)
 trashPos = Vector2(986, 903)

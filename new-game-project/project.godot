@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Shovel Jam 2025"
+config/name="Get Started Eventually"
 run/main_scene="uid://b0inv6kdanykl"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0.237539, 0.237539, 0.237539, 1)
+boot_splash/image="uid://dyg5q1grkebte"
+config/icon="uid://dilio0n2pg27i"
 
 [autoload]
 
